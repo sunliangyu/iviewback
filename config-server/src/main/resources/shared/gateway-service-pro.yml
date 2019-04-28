@@ -1,0 +1,36 @@
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 200000
+
+ribbon:
+  ReadTimeout: 20000
+  ConnectTimeout: 20000
+
+zuul:
+  host:
+    connect-timeout-millis: 200000
+    socket-timeout-millis: 200000
+
+  routes:
+    system-service:
+      path: /system/**
+      serviceId: system-service
+      sensitiveHeaders:
+
+    client-service:
+      path: /client/**
+      serviceId: client-service
+      sensitiveHeaders:
+
+    kitchen-service:
+      path: /kitchen/**
+      serviceId: kitchen-service
+      sensitiveHeaders:
+server:
+  port: 5000
+
+
