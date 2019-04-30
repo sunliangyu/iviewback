@@ -2,6 +2,10 @@ package com.qust.service;
 
 
 import com.qust.dao.FoodOrderDao;
+import com.qust.dao.OrderDetailDao;
+import com.qust.entity.FoodOrder;
+import com.qust.entity.OrderDetail;
+import com.qust.feignclient.KitchenClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +19,10 @@ import java.util.*;
 public class OrderService {
     @Autowired
     FoodOrderDao foodOrderDao;
+    @Autowired
+    OrderDetailDao orderDetailDao;
+    @Autowired
+    KitchenClient kitchenClient;
     /**
     * 获取未读取的订单
     *@Param [restaurant]
@@ -49,7 +57,7 @@ public class OrderService {
         result.put("unread",unread);
         re = foodOrderDao.findToday(restaurant,'b',today,tomorrow);
         access = createRes(re);
-        result.put("access",access);
+        result.put("receive",access);
         re = foodOrderDao.findToday(restaurant,'c',today,tomorrow);
         refuse = createRes(re);
         result.put("refuse",refuse);
@@ -78,5 +86,99 @@ public class OrderService {
             result.add(map);
         }
         return result;
+    }
+
+    public Map<String,Object>  getOrderById(Long resturant , Long order){
+        FoodOrder foodOrder = foodOrderDao.getSimpleOrder(resturant,order);
+        StringBuilder  message = new StringBuilder();
+        Map<String,Object> result = new HashMap<>();
+        if( foodOrder.isFlag() ) {
+            message.append("外卖送至").append(foodOrder.getLocation());
+        } else {
+            message.append("店内送至桌位：").append(foodOrder.getLocation());
+        }
+        if(foodOrder.getFlow() == 'c'){
+            String reason = foodOrder.getReason();
+            if( reason != null){
+                result.put("reason",reason);
+            }
+        }
+        result.put("location",message.toString());
+        result.put("people",foodOrder.getPeople());
+        result.put("price",foodOrder.getPrice());
+        List<Object[]> detail = orderDetailDao.getOrderById(resturant,order);
+        List<String> foods = createFood(detail);
+        result.put("foods",foods);
+        return result;
+    }
+
+    /**
+    * 生成food 表示
+    *@Param [detail]
+    *@Return java.util.List<java.lang.String>
+    *@Author 孙良玉
+    */
+    public List<String> createFood(List<Object[]> detail){
+        List<String> result  = new ArrayList<>();
+        StringBuilder message =  new StringBuilder();
+        for(Object[] food : detail){
+            message.append(food[0].toString()).append("  共计").append(food[1].toString()).append("份");
+            if(food[2] != null ){
+                message.append("  备注").append(food[2].toString());
+            }
+            result.add(message.toString());
+            message.delete(0,message.length());
+        }
+        return result;
+    }
+
+    /**
+    *订单处理
+    *@Param [restaurant, order, state]
+    *@Return void
+    *@Author 孙良玉
+    */
+    public void alterOrder(Long restaurant, Long order , char state ,String reason){
+        if(state == 'b'){
+            this.receiveOrder(restaurant,order);
+        }else if(state == 'c'){
+            this.refuseOrder(restaurant,order,reason);
+        }
+    }
+
+    /**
+    *接受订单
+    *@Param [restaurant, order]
+    *@Return void
+    *@Author 孙良玉
+    */
+    public void receiveOrder (Long restaurant, Long order){
+        foodOrderDao.updateFlow(restaurant,order,'b',new java.sql.Date(System.currentTimeMillis()),null);
+        Map<String,Object> result = new HashMap<>();
+        Boolean flag = foodOrderDao.getFlag(restaurant,order);
+        result.put("flag",flag);
+        result.put("restaurant",restaurant);
+        result.put("order",order);
+        List<OrderDetail> arg= orderDetailDao.findByOrderDetailPkIndent(restaurant,order);
+        List<Map<String,Object>>  foods = new ArrayList<>();
+        for (OrderDetail food : arg){
+            Map<String,Object>  map = new HashMap<>();
+            map.put("id",food.getOrderDetailPk().getFood());
+            map.put("remark",food.getRemark());
+            map.put("counts",food.getcounts());
+            foods.add(map);
+        }
+        result.put("foods",foods);
+        kitchenClient.addOrder(result);
+    }
+
+    /**
+    *拒绝订单
+    *@Param [restaurant, order]
+    *@Return void
+    *@Author 孙良玉
+    */
+    public void refuseOrder (Long restaurant, Long order , String reason){
+        foodOrderDao.updateFlow(restaurant,order,'c',new java.sql.Date(System.currentTimeMillis()),reason);
     }
 }

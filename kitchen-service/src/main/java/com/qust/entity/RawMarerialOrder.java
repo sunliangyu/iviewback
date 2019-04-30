@@ -4,7 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.io.Serializable;
-import java.sql.Timestamp;
+import java.sql.Date;
 
 
 // 物品流水表
@@ -21,7 +21,7 @@ public class RawMarerialOrder implements Serializable {
     @Column
     private int output;
     @Column
-    private Timestamp createTime;
+    private Date createTime;
     @Column
     private String remark;
 
@@ -57,11 +57,11 @@ public class RawMarerialOrder implements Serializable {
         this.output = output;
     }
 
-    public Timestamp getCreateTime() {
+    public Date getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Timestamp createTime) {
+    public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
 

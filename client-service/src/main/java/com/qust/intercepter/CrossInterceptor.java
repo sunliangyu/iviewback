@@ -9,8 +9,8 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@Configuration
-@ConfigurationProperties(prefix = "spring.cross")
+//@Configuration
+//@ConfigurationProperties(prefix = "spring.cross")
 public class CrossInterceptor implements HandlerInterceptor {
 
     @Override

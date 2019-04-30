@@ -2,7 +2,7 @@ package com.qust.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.sql.Timestamp;
+import java.sql.Date;
 
 
 // 系统餐厅成员表
@@ -16,7 +16,7 @@ public class RestaurantMember implements Serializable {
     private  Long user;
 
     @Column
-    private Timestamp createtime;
+    private Date createtime;
 
     @Column
     private String name;
@@ -46,11 +46,11 @@ public class RestaurantMember implements Serializable {
         this.user = user;
     }
 
-    public Timestamp getCreatetime() {
+    public Date getCreatetime() {
         return createtime;
     }
 
-    public void setCreatetime(Timestamp createtime) {
+    public void setCreatetime(Date createtime) {
         this.createtime = createtime;
     }
 

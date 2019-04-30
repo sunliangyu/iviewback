@@ -11,6 +11,6 @@ import java.util.Map;
 public interface ClientClient  {
 
 
-    @GetMapping(value = "/client/getUnreadCount")
+    @GetMapping(value = "/order/getUnreadCount")
     Map getUnreadCount(@RequestParam("restaurant")Long  restaurant);
 }

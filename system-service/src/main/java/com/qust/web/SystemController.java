@@ -74,8 +74,17 @@ public class SystemController {
     public Map getMessageByid (@RequestParam  Long restaurant , Long  msg_id) {
         String message = infoMessageService.getMessagesByid(restaurant,msg_id);
         Map result =new HashMap();
-        result.put("message",result);
+        result.put("message",message);
         return result;
     }
 
+
+    @ApiOperation(value = "根据消息id修改消息状态", notes = "根据消息id修改消息状态")
+    @PostMapping  ("/altermessage")
+    public void alterMessage (@RequestBody  Map<String,Object> map) {
+        Long restaurant = Long.valueOf((map.get("restaurant")).toString());
+        Long msg_id = Long.valueOf((map.get("msg_id")).toString());
+        char state = ((String)map.get("state")).charAt(0);
+        infoMessageService.alterMessage(restaurant,msg_id,state);
+    }
 }

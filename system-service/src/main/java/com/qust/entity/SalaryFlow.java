@@ -2,7 +2,7 @@ package com.qust.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.sql.Timestamp;
+import java.sql.Date;
 
 @Entity
 public class SalaryFlow  implements Serializable {
@@ -20,7 +20,7 @@ public class SalaryFlow  implements Serializable {
     private float output;
 
     @Column
-    private Timestamp time;
+    private Date time;
 
     public Long getId() {
         return id;
@@ -54,11 +54,11 @@ public class SalaryFlow  implements Serializable {
         this.output = output;
     }
 
-    public Timestamp getTime() {
+    public Date getTime() {
         return time;
     }
 
-    public void setTime(Timestamp time) {
+    public void setTime(Date time) {
         this.time = time;
     }
 

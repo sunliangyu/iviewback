@@ -62,4 +62,9 @@ public class InfoMessageService {
         String message = infoMessageDao.findMessageBuId(restaurant,id);
         return message;
     }
+
+    public void alterMessage (Long restaurant,Long id ,char state){
+         infoMessageDao.alterMessage(restaurant,id,state);
+    }
+
 }

@@ -4,7 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.io.Serializable;
-import java.sql.Timestamp;
+import java.sql.Date;
 
 @Entity
 public class RawMaterial implements Serializable{
@@ -19,7 +19,7 @@ public class RawMaterial implements Serializable{
     @Column
     private  char flag;
     @Column
-    private Timestamp updateTime;
+    private Date updateTime;
     @Column
     private int  count;
 
@@ -47,11 +47,11 @@ public class RawMaterial implements Serializable{
         this.flag = flag;
     }
 
-    public Timestamp getUpdateTime() {
+    public Date getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(Timestamp updateTime) {
+    public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
 

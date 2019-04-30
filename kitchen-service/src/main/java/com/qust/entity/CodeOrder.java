@@ -4,7 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import java.io.Serializable;
-import java.sql.Timestamp;
+import java.sql.Date;
 
 @Entity
 public class CodeOrder implements Serializable {
@@ -18,11 +18,11 @@ public class CodeOrder implements Serializable {
     @Column
     private char state;// A准备B制作中C完成
     @Column
-    private char flag;//A 外卖 b 非外卖
+    private Boolean flag;//y 外卖 b// 非外卖
     @Column
-    private Timestamp createTime;
+    private Date createTime;
     @Column
-    private Timestamp updateTime;
+    private Date updateTime;
     @Column
     private Long selectStaff;
     @Column
@@ -63,27 +63,27 @@ public class CodeOrder implements Serializable {
         this.state = state;
     }
 
-    public char getFlag() {
+    public Boolean getFlag() {
         return flag;
     }
 
-    public void setFlag(char flag) {
+    public void setFlag(Boolean flag) {
         this.flag = flag;
     }
 
-    public Timestamp getCreateTime() {
+    public Date getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Timestamp createTime) {
+    public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
 
-    public Timestamp getUpdateTime() {
+    public Date getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(Timestamp updateTime) {
+    public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
 

@@ -2,7 +2,10 @@ package com.qust.dao;
 
 import com.qust.entity.InfoMessage;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+
+import javax.transaction.Transactional;
 import java.util.List;
 
 public interface InfoMessageDao extends JpaRepository<InfoMessage,Long> {
@@ -17,4 +20,9 @@ public interface InfoMessageDao extends JpaRepository<InfoMessage,Long> {
 
     @Query(value = "SELECT message from info_message where restaurant = ?1  and  id = ?2", nativeQuery = true)
     String findMessageBuId (Long restaurant,Long id);
+
+    @Transactional
+    @Modifying
+    @Query(value = "update info_message set  state = ?3  where restaurant = ?1  and  id = ?2", nativeQuery = true)
+    int alterMessage (Long restaurant,Long id,char state);
 }

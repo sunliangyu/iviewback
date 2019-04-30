@@ -2,6 +2,7 @@ package com.qust.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.sql.Date;
 import java.sql.Timestamp;
 
 // 通知表
@@ -21,7 +22,7 @@ public class InfoMessage implements Serializable {
     private  String message;
 
     @Column
-    private Timestamp createTime;
+    private Date createTime;
 
     @Column
     private String title;
@@ -66,11 +67,11 @@ public class InfoMessage implements Serializable {
         this.message = message;
     }
 
-    public Timestamp getTime() {
+    public Date getTime() {
         return createTime;
     }
 
-    public void setTime(Timestamp time) {
+    public void setTime(Date time) {
         this.createTime = time;
     }
 }

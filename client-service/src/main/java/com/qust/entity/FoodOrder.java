@@ -2,6 +2,7 @@ package com.qust.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.sql.Date;
 import java.sql.Timestamp;
 
 
@@ -16,9 +17,8 @@ public class FoodOrder implements Serializable {
     @Column
     private Long client;
 
-
     @Column
-    private Timestamp createTime;
+    private Date createTime;
 
     @Column
     private char flow;
@@ -48,6 +48,34 @@ public class FoodOrder implements Serializable {
     private int countFoods;
     @Column
     private Long restaurant;
+    @Column
+    private Date accessTime;
+    @Column
+    private String reason;
+
+    public String getReason() {
+        return reason;
+    }
+
+    public void setReason(String reason) {
+        this.reason = reason;
+    }
+
+    public boolean isFlag() {
+        return flag;
+    }
+
+    public void setFlag(boolean flag) {
+        this.flag = flag;
+    }
+
+    public Date getAccessTime() {
+        return accessTime;
+    }
+
+    public void setAccessTime(Date accessTime) {
+        this.accessTime = accessTime;
+    }
 
     public Long getRestaurant() {
         return restaurant;
@@ -81,11 +109,11 @@ public class FoodOrder implements Serializable {
         this.client = client;
     }
 
-    public Timestamp getCreateTime() {
+    public Date getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Timestamp createTime) {
+    public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
 
@@ -129,13 +157,6 @@ public class FoodOrder implements Serializable {
         this.price = price;
     }
 
-    public boolean isflag() {
-        return flag;
-    }
-
-    public void setflag(boolean flag) {
-        this.flag = flag;
-    }
 
     public int getPeople() {
         return people;

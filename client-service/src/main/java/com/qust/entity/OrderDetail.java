@@ -16,9 +16,7 @@ public class OrderDetail implements Serializable {
     @Column
     private String remark;
     @Column
-    private  int count;
-    @Column
-    private  char flag;
+    private  int counts;
     @Column
     private String foodName;
     @Column
@@ -64,19 +62,12 @@ public class OrderDetail implements Serializable {
         this.remark = remark;
     }
 
-    public int getCount() {
-        return count;
+    public int getcounts() {
+        return counts;
     }
 
-    public void setCount(int count) {
-        this.count = count;
+    public void setcounts(int counts) {
+        this.counts = counts;
     }
 
-    public char getFlag() {
-        return flag;
-    }
-
-    public void setFlag(char flag) {
-        this.flag = flag;
-    }
 }
