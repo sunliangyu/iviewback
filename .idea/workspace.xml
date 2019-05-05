@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86d61acd-ccd4-468c-8c02-6241cf989e15" name="Default" comment="提交">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-service/src/main/java/com/qust/dao/FoodOrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-service/src/main/java/com/qust/dao/FoodOrderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-service/src/main/java/com/qust/entity/FoodOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-service/src/main/java/com/qust/entity/FoodOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-service/src/main/java/com/qust/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-service/src/main/java/com/qust/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/qust/Jwt/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/qust/Jwt/JwtUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/qust/annotation/SysLogger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/qust/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/com/qust/config/WebMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/qust/filter/AccessFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/com/qust/filter/AccessFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/qust/intercerter/TokenIntercepter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/com/qust/intercerter/TokenIntercepter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/FoodClassDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/FoodClassDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/FoodMenuDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/FoodMenuDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/FoodNeedDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/FoodNeedDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/RawMaterialDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/RawMaterialDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/CodeOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/CodeOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/FoodMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/FoodMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/FoodNeed.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/FoodNeed.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/OrderFinsh.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/OrderFinsh.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/RawMarerialOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/RawMarerialOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/RawMaterial.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/RawMaterial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system-service/src/main/java/com/qust/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/src/main/java/com/qust/service/UserService.java" afterDir="false" />
-    </list>
+    <list default="true" id="86d61acd-ccd4-468c-8c02-6241cf989e15" name="Default" comment="增加菜单的处理维护" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/eureka-server/target/" />
@@ -92,7 +71,7 @@
           <entry key="log" value="2" />
           <entry key="pom" value="3" />
           <entry key="sql" value="1" />
-          <entry key="xml" value="34" />
+          <entry key="xml" value="37" />
           <entry key="yml" value="111" />
         </counts>
       </usages-collector>
@@ -104,7 +83,7 @@
           <entry key="Kotlin" value="1" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="SQL" value="1" />
-          <entry key="XML" value="37" />
+          <entry key="XML" value="40" />
           <entry key="YAML" value="111" />
         </counts>
       </usages-collector>
@@ -115,7 +94,7 @@
           <entry key="ft" value="4" />
           <entry key="java" value="31203" />
           <entry key="log" value="1" />
-          <entry key="txt" value="11" />
+          <entry key="txt" value="25" />
           <entry key="xml" value="178" />
           <entry key="yml" value="203" />
         </counts>
@@ -124,7 +103,7 @@
         <counts>
           <entry key="CLASS" value="3" />
           <entry key="JAVA" value="31202" />
-          <entry key="PLAIN_TEXT" value="66" />
+          <entry key="PLAIN_TEXT" value="80" />
           <entry key="SQL" value="1" />
           <entry key="VTL" value="4" />
           <entry key="XML" value="178" />
@@ -147,7 +126,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.8.RELEASE/spring-webmvc-4.3.8.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="22">
@@ -166,24 +145,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/web/FoodController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="54" column="29" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#963#964#0" expanded="true" />
-                <element signature="e#1003#1004#0" expanded="true" />
-                <element signature="e#1399#1400#0" expanded="true" />
-                <element signature="e#1443#1444#0" expanded="true" />
-                <element signature="e#1824#1825#0" expanded="true" />
-                <element signature="e#1864#1865#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/service/FoodService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="96">
@@ -193,6 +154,11 @@
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -257,8 +223,8 @@
       <find>test</find>
       <find>order by</find>
       <find>getfoodClass</find>
-      <find>getFoodsByClass</find>
       <find>update</find>
+      <find>getFoodsByClass</find>
     </findStrings>
     <replaceStrings>
       <replace>qust</replace>
@@ -363,9 +329,8 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="396" />
-    <option name="y" value="333" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-9" />
     <option name="width" value="1362" />
     <option name="height" value="1032" />
   </component>
@@ -386,6 +351,11 @@
             <path>
               <item name="chapter16" type="b2602c69:ProjectViewProjectNode" />
               <item name="chapter16" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chapter16" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chapter16" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="chapter16" type="b2602c69:ProjectViewProjectNode" />
@@ -800,6 +770,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.41494253" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="vcs.patch.to.clipboard" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -1137,7 +1108,7 @@
       <workItem from="1556585141531" duration="26624000" />
       <workItem from="1556847187504" duration="23725000" />
       <workItem from="1556933581850" duration="12627000" />
-      <workItem from="1557022251142" duration="20149000" />
+      <workItem from="1557022251142" duration="20393000" />
     </task>
     <task id="LOCAL-00001" summary="提交">
       <created>1556454054677</created>
@@ -1153,7 +1124,21 @@
       <option name="project" value="LOCAL" />
       <updated>1556585358567</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="增加菜单的处理维护">
+      <created>1557061758215</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1557061758215</updated>
+    </task>
+    <task id="LOCAL-00004" summary="增加菜单的处理维护">
+      <created>1557061855609</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1557061855609</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1189,10 +1174,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="427876000" />
+    <option name="totallyTimeSpent" value="428120000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="Capture Tool" order="1" />
@@ -1206,14 +1191,14 @@
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.2588997" side_tool="true" weight="0.5159575" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Java Enterprise" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="3" weight="0.22024867" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="3" visible="true" weight="0.6731794" />
       <window_info anchor="bottom" id="Find" order="4" sideWeight="0.6982201" weight="0.6642984" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.3285968" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3285968" />
       <window_info anchor="bottom" id="Run" order="9" sideWeight="0.82686085" weight="0.73889875" />
-      <window_info active="true" anchor="bottom" id="Debug" order="10" sideWeight="0.7411003" visible="true" weight="0.60746" />
+      <window_info anchor="bottom" id="Debug" order="10" sideWeight="0.7411003" weight="0.60746" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3587922" />
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" id="LuaCheck" order="13" />
@@ -1288,7 +1273,8 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交" />
+    <MESSAGE value="增加菜单的处理维护" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加菜单的处理维护" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1604,20 +1590,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/com/auth0/java-jwt/3.3.0/java-jwt-3.3.0.jar!/com/auth0/jwt/interfaces/Payload.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system-service/src/main/java/com/qust/util/HttpUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-801">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/Map.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="109">
@@ -1955,6 +1927,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/FoodMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="90" column="24" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/FoodMenuDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.8.RELEASE/spring-webmvc-4.3.8.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="413" selection-start-line="413" selection-end-line="413" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/web/FoodController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
@@ -1971,18 +1964,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/FoodMenu.java">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="90" column="24" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/FoodMenuDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-        </state>
+        <state relative-caret-position="-171" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/service/FoodService.java">
@@ -1995,12 +1979,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.8.RELEASE/spring-webmvc-4.3.8.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="413" selection-start-line="413" selection-end-line="413" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
