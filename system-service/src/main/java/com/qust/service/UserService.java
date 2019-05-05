@@ -29,7 +29,7 @@ public class UserService {
              errorCode = ErrorCode.USER_NOT_FOUND;
         }else {
             if(BPwdEncoderUtils.matches(arg.getPassword(),user.getPassword())){
-                token = JwtUtil.getToken(user.getId());
+                token = JwtUtil.getToken(user.getId(),user.getRestaurantId());
                 if(token == null){
                     errorCode = ErrorCode.TOKEN_INVALID;
                 }

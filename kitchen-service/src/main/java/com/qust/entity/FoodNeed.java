@@ -21,6 +21,17 @@ public class FoodNeed implements Serializable {
     @Column
     private int count;
 
+    @Column
+    private String nname;
+
+    public String getNname() {
+        return nname;
+    }
+
+    public void setNname(String nname) {
+        this.nname = nname;
+    }
+
     public FoodNeedPk getId() {
         return id;
     }

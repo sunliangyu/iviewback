@@ -16,7 +16,7 @@ public class JwtUtil {
     //24小时
     public static final long EXIST_TIME = 23 *60 * 60 * 1000 ;
     public static final String SECURITY = "woshitokenmiyao123666lalala";
-    public static String getToken ( Long userid  ) {
+    public static String getToken ( Long userid  , Long restaurant) {
         try{
             Date data = new Date(System.currentTimeMillis() + EXIST_TIME);
             // 私钥 加密算法
@@ -26,6 +26,7 @@ public class JwtUtil {
             header.put("alg","HS256");
             return JWT.create().withHeader(header)
                     .withClaim("userid",userid)
+                    .withClaim("restaurant",restaurant)
                     .withExpiresAt(data)
                     .sign(algorithm);
         }catch (UnsupportedEncodingException e) {
@@ -47,14 +48,16 @@ public class JwtUtil {
         }
     }
 
-    public static boolean verify (String token) throws Exception {
+    public static Map verify (String token) throws Exception {
         try {
             Algorithm algorithm = Algorithm.HMAC256(SECURITY);
             JWTVerifier verifier = JWT.require(algorithm).build();
-            verifier.verify(token);
-            return  true;
+            return verifier.verify(token).getClaims();
         } catch (Exception e) {
-            return false;
+            return null;
         }
     }
+
+
+
 }

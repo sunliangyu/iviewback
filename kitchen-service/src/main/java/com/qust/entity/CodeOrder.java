@@ -5,6 +5,7 @@ import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import java.io.Serializable;
 import java.sql.Date;
+import java.sql.Timestamp;
 
 @Entity
 public class CodeOrder implements Serializable {
@@ -20,9 +21,9 @@ public class CodeOrder implements Serializable {
     @Column
     private Boolean flag;//y 外卖 b// 非外卖
     @Column
-    private Date createTime;
+    private Timestamp createTime;
     @Column
-    private Date updateTime;
+    private Timestamp updateTime;
     @Column
     private Long selectStaff;
     @Column
@@ -71,19 +72,19 @@ public class CodeOrder implements Serializable {
         this.flag = flag;
     }
 
-    public Date getCreateTime() {
+    public Timestamp getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(Timestamp createTime) {
         this.createTime = createTime;
     }
 
-    public Date getUpdateTime() {
+    public Timestamp getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(Date updateTime) {
+    public void setUpdateTime(Timestamp updateTime) {
         this.updateTime = updateTime;
     }
 

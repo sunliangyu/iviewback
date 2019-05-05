@@ -3,32 +3,25 @@
   <component name="ChangeListManager">
     <list default="true" id="86d61acd-ccd4-468c-8c02-6241cf989e15" name="Default" comment="提交">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-service/src/main/java/com/qust/dao/FoodOrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-service/src/main/java/com/qust/dao/FoodOrderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-service/src/main/java/com/qust/dao/OrderDetailDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-service/src/main/java/com/qust/dao/OrderDetailDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-service/src/main/java/com/qust/entity/FoodOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-service/src/main/java/com/qust/entity/FoodOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-service/src/main/java/com/qust/entity/NoPk.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-service/src/main/java/com/qust/entity/OrderDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-service/src/main/java/com/qust/entity/OrderDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-service/src/main/java/com/qust/intercepter/CrossInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-service/src/main/java/com/qust/intercepter/CrossInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-service/src/main/java/com/qust/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-service/src/main/java/com/qust/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-service/src/main/java/com/qust/web/ClientControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-service/src/main/java/com/qust/web/ClientControler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/shared/client-service-pro.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/shared/client-service-pro.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/shared/gateway-service-pro.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/shared/gateway-service-pro.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/shared/kitchen-service-pro.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/shared/kitchen-service-pro.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/shared/system-service-pro.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/shared/system-service-pro.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/qust/Jwt/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/qust/Jwt/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/qust/annotation/SysLogger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/qust/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/com/qust/config/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/qust/filter/AccessFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/com/qust/filter/AccessFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/qust/intercerter/TokenIntercepter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/com/qust/intercerter/TokenIntercepter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/FoodClassDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/FoodClassDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/FoodMenuDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/FoodMenuDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/FoodNeedDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/FoodNeedDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/RawMaterialDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/RawMaterialDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/CodeOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/CodeOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/FoodMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/FoodMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/FoodNeed.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/FoodNeed.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/OrderFinsh.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/OrderFinsh.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/RawMarerialOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/RawMarerialOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/RawMaterial.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/RawMaterial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system-service/src/main/java/com/qust/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/src/main/java/com/qust/config/WebMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system-service/src/main/java/com/qust/dao/InfoMessageDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/src/main/java/com/qust/dao/InfoMessageDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system-service/src/main/java/com/qust/entity/InfoMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/src/main/java/com/qust/entity/InfoMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system-service/src/main/java/com/qust/entity/RestaurantMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/src/main/java/com/qust/entity/RestaurantMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system-service/src/main/java/com/qust/entity/SalaryFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/src/main/java/com/qust/entity/SalaryFlow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system-service/src/main/java/com/qust/feignclient/ClientClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/src/main/java/com/qust/feignclient/ClientClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system-service/src/main/java/com/qust/intercepter/ResponseCode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system-service/src/main/java/com/qust/service/InfoMessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/src/main/java/com/qust/service/InfoMessageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system-service/src/main/java/com/qust/web/SystemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/src/main/java/com/qust/web/SystemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-service/src/main/java/com/qust/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/system-service/src/main/java/com/qust/service/UserService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -67,51 +60,52 @@
     <session id="-178185407">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="18" />
+          <entry key="project.closed" value="21" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.16" value="2" />
-          <entry key="project.open.time.17" value="2" />
+          <entry key="project.open.time.17" value="3" />
           <entry key="project.open.time.18" value="2" />
-          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.19" value="2" />
           <entry key="project.open.time.20" value="1" />
-          <entry key="project.open.time.21" value="1" />
+          <entry key="project.open.time.21" value="2" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.27" value="2" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.30" value="1" />
           <entry key="project.open.time.32" value="1" />
+          <entry key="project.open.time.37" value="1" />
           <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="21" />
+          <entry key="project.opened" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="cert" value="1" />
-          <entry key="class" value="138" />
+          <entry key="class" value="158" />
           <entry key="gitignore" value="2" />
           <entry key="iml" value="4" />
-          <entry key="java" value="700" />
+          <entry key="java" value="819" />
           <entry key="kt" value="1" />
           <entry key="log" value="2" />
           <entry key="pom" value="3" />
           <entry key="sql" value="1" />
-          <entry key="xml" value="33" />
-          <entry key="yml" value="105" />
+          <entry key="xml" value="34" />
+          <entry key="yml" value="111" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="138" />
+          <entry key="CLASS" value="158" />
           <entry key="IDEA_MODULE" value="4" />
-          <entry key="JAVA" value="700" />
+          <entry key="JAVA" value="819" />
           <entry key="Kotlin" value="1" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="SQL" value="1" />
-          <entry key="XML" value="36" />
-          <entry key="YAML" value="105" />
+          <entry key="XML" value="37" />
+          <entry key="YAML" value="111" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -119,9 +113,9 @@
           <entry key="class" value="3" />
           <entry key="dummy" value="54" />
           <entry key="ft" value="4" />
-          <entry key="java" value="20807" />
+          <entry key="java" value="31203" />
           <entry key="log" value="1" />
-          <entry key="txt" value="5" />
+          <entry key="txt" value="11" />
           <entry key="xml" value="178" />
           <entry key="yml" value="203" />
         </counts>
@@ -129,8 +123,9 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="3" />
-          <entry key="JAVA" value="20807" />
-          <entry key="PLAIN_TEXT" value="60" />
+          <entry key="JAVA" value="31202" />
+          <entry key="PLAIN_TEXT" value="66" />
+          <entry key="SQL" value="1" />
           <entry key="VTL" value="4" />
           <entry key="XML" value="178" />
           <entry key="YAML" value="203" />
@@ -143,11 +138,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/service/CodeService.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/FoodMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="18">
+              <caret line="90" column="24" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.8.RELEASE/spring-webmvc-4.3.8.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="413" selection-start-line="413" selection-end-line="413" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/FoodMenuDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="31">
+              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/web/FoodController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="141">
+              <caret line="54" column="29" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#963#964#0" expanded="true" />
+                <element signature="e#1003#1004#0" expanded="true" />
+                <element signature="e#1399#1400#0" expanded="true" />
+                <element signature="e#1443#1444#0" expanded="true" />
+                <element signature="e#1824#1825#0" expanded="true" />
+                <element signature="e#1864#1865#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/service/FoodService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="195" column="72" selection-start-line="195" selection-start-column="72" selection-end-line="195" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -156,10 +196,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-service/src/main/java/com/qust/web/ClientControler.java">
+        <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/FoodNeed.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="-152">
+              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -167,86 +207,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/web/KitchenController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#753#754#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.8.RELEASE/spring-web-4.3.8.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="59" selection-start-line="59" selection-end-line="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.8.RELEASE/spring-webmvc-4.3.8.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-19">
-              <caret line="28" column="36" lean-forward="true" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-service/src/main/java/com/qust/service/OrderService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="49">
-              <caret line="102" column="34" selection-start-line="102" selection-start-column="28" selection-end-line="102" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-service/src/main/java/com/qust/entity/FoodOrder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="53" column="25" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="25" />
-              <folding>
-                <element signature="e#894#895#0" expanded="true" />
-                <element signature="e#923#924#0" expanded="true" />
-                <element signature="e#967#968#0" expanded="true" />
-                <element signature="e#1003#1004#0" expanded="true" />
-                <element signature="e#853#854#0" expanded="true" />
-                <element signature="e#880#881#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.8.RELEASE/spring-webmvc-4.3.8.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="35">
-              <caret line="413" selection-start-line="413" selection-end-line="413" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-service/src/main/java/com/qust/dao/FoodOrderDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-service/src/main/java/com/qust/web/OrderControler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="19">
+              <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -267,14 +229,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>SysLogger</find>
-      <find>query_cache_size</find>
-      <find>mysql</find>
-      <find>doService</find>
-      <find>userController</find>
-      <find>BPwdEncoderUtils</find>
-      <find>createUser</find>
-      <find>initialization started</find>
       <find>started</find>
       <find>uaa-service</find>
       <find>forezp</find>
@@ -295,8 +249,16 @@
       <find>Timestamp</find>
       <find>orderService</find>
       <find>count</find>
-      <find>update</find>
       <find>map</find>
+      <find>getOrder</find>
+      <find>getOrderCountByAccessTime</find>
+      <find>today</find>
+      <find>start</find>
+      <find>test</find>
+      <find>order by</find>
+      <find>getfoodClass</find>
+      <find>getFoodsByClass</find>
+      <find>update</find>
     </findStrings>
     <replaceStrings>
       <replace>qust</replace>
@@ -321,33 +283,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/system-service/src/main/java/com/qust/entity/Staff.java" />
-        <option value="$PROJECT_DIR$/client-service/src/main/java/com/qust/entity/OrderPk.java" />
-        <option value="$PROJECT_DIR$/client-service/src/main/java/com/qust/entity/ShoppingCardPk.java" />
-        <option value="$PROJECT_DIR$/client-service/src/main/java/com/qust/entity/ShoppingCard.java" />
-        <option value="$PROJECT_DIR$/client-service/src/main/java/com/qust/entity/OrderDetailPk.java" />
-        <option value="$PROJECT_DIR$/client-service/src/main/java/com/qust/dao/ShoppingDao.java" />
-        <option value="$PROJECT_DIR$/client-service/src/main/java/com/qust/entity/NoPk.java" />
-        <option value="$PROJECT_DIR$/client-service/src/main/java/com/qust/dao/OrderFinshDao.java" />
-        <option value="$PROJECT_DIR$/client-service/src/main/java/com/qust/entity/OrderFinsh.java" />
-        <option value="$PROJECT_DIR$/system-service/src/main/java/com/qust/service/UserService.java" />
-        <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/qust/intercerter/ResponseCode.java" />
-        <option value="$PROJECT_DIR$/system-service/src/main/java/com/qust/intercepter/ResponseCode.java" />
-        <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/qust/config/WebMvcConfig.java" />
-        <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/qust/filter/AccessFilter.java" />
-        <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/qust/filter/CrosFilter.java" />
-        <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/qust/config/GateWayCorsConfig.java" />
-        <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/qust/intercerter/OptionsIntecpter.java" />
-        <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/qust/filter/CorsFilter.java" />
-        <option value="$PROJECT_DIR$/system-service/src/main/java/com/qust/intercepter/CrossInterceptor.java" />
-        <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/qust/GatewayServiceApplication.java" />
         <option value="$PROJECT_DIR$/client-service/src/main/java/com/qust/ClientServiceApplication.java" />
         <option value="$PROJECT_DIR$/client-service/src/main/java/com/qust/intercepter/CrossInterceptor.java" />
         <option value="$PROJECT_DIR$/system-service/src/main/java/com/qust/config/WebMvcConfig.java" />
         <option value="$PROJECT_DIR$/system-service/src/main/java/com/qust/entity/InfoMessage.java" />
-        <option value="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/OrderFinsh.java" />
-        <option value="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/RawMarerialOrder.java" />
-        <option value="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/RawMaterial.java" />
         <option value="$PROJECT_DIR$/system-service/src/main/java/com/qust/entity/SalaryFlow.java" />
         <option value="$PROJECT_DIR$/system-service/src/main/java/com/qust/entity/RestaurantMember.java" />
         <option value="$PROJECT_DIR$/system-service/src/main/java/com/qust/config/FeignBeanFactoryPostProcessor.java" />
@@ -361,17 +300,40 @@
         <option value="$PROJECT_DIR$/client-service/src/main/java/com/qust/web/ClientControler.java" />
         <option value="$PROJECT_DIR$/system-service/src/main/java/com/qust/feignclient/ClientClient.java" />
         <option value="$PROJECT_DIR$/client-service/pom.xml" />
-        <option value="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/web/KitchenController.java" />
         <option value="$PROJECT_DIR$/client-service/src/main/java/com/qust/dao/OrderDetailDao.java" />
-        <option value="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/CodeOrder.java" />
         <option value="$PROJECT_DIR$/client-service/src/main/java/com/qust/feignclient/KitchenClient.java" />
         <option value="$PROJECT_DIR$/client-service/src/main/java/com/qust/entity/ClientInfomation.java" />
         <option value="$PROJECT_DIR$/client-service/src/main/java/com/qust/entity/OrderDetail.java" />
-        <option value="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/service/CodeService.java" />
         <option value="$PROJECT_DIR$/client-service/src/main/java/com/qust/web/OrderControler.java" />
+        <option value="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/RawMaterial.java" />
+        <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/qust/config/WebMvcConfig.java" />
+        <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/qust/intercerter/TokenIntercepter.java" />
+        <option value="$PROJECT_DIR$/system-service/src/main/java/com/qust/service/UserService.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/qust/Jwt/JwtUtil.java" />
+        <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/qust/util.java" />
+        <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/qust/util/HttpBodyAnaly.java" />
+        <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/qust/filter/AccessFilter.java" />
+        <option value="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/RawMarerialOrder.java" />
         <option value="$PROJECT_DIR$/client-service/src/main/java/com/qust/entity/FoodOrder.java" />
-        <option value="$PROJECT_DIR$/client-service/src/main/java/com/qust/dao/FoodOrderDao.java" />
         <option value="$PROJECT_DIR$/client-service/src/main/java/com/qust/service/OrderService.java" />
+        <option value="$PROJECT_DIR$/client-service/src/main/java/com/qust/dao/FoodOrderDao.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/qust/util.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/qust/util/CreateId.java" />
+        <option value="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/RawMaterialDao.java" />
+        <option value="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/service/MaterialService.java" />
+        <option value="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/FoodImageDao.java" />
+        <option value="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/FoodClassDao.java" />
+        <option value="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/web/KitchenController.java" />
+        <option value="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/OrderFinsh.java" />
+        <option value="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/CodeOrder.java" />
+        <option value="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/FoodNeed.java" />
+        <option value="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/FoodClassPk.java" />
+        <option value="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/service/CodeService.java" />
+        <option value="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/web/FoodController.java" />
+        <option value="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/FoodNeedDao.java" />
+        <option value="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/FoodMenu.java" />
+        <option value="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/FoodMenuDao.java" />
+        <option value="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/service/FoodService.java" />
       </list>
     </option>
   </component>
@@ -403,8 +365,8 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="396" />
-    <option name="y" value="378" />
-    <option name="width" value="915" />
+    <option name="y" value="333" />
+    <option name="width" value="1362" />
     <option name="height" value="1032" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -415,7 +377,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -466,16 +430,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="qust" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chapter16" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chapter16" type="462c0819:PsiDirectoryNode" />
-              <item name="client-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="qust" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -487,26 +441,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="qust" type="462c0819:PsiDirectoryNode" />
               <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chapter16" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chapter16" type="462c0819:PsiDirectoryNode" />
-              <item name="client-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="qust" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chapter16" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chapter16" type="462c0819:PsiDirectoryNode" />
-              <item name="client-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="qust" type="462c0819:PsiDirectoryNode" />
-              <item name="feignclient" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="chapter16" type="b2602c69:ProjectViewProjectNode" />
@@ -531,6 +465,133 @@
             <path>
               <item name="chapter16" type="b2602c69:ProjectViewProjectNode" />
               <item name="chapter16" type="462c0819:PsiDirectoryNode" />
+              <item name="config-server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chapter16" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chapter16" type="462c0819:PsiDirectoryNode" />
+              <item name="config-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chapter16" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chapter16" type="462c0819:PsiDirectoryNode" />
+              <item name="config-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chapter16" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chapter16" type="462c0819:PsiDirectoryNode" />
+              <item name="config-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chapter16" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chapter16" type="462c0819:PsiDirectoryNode" />
+              <item name="config-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qust" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chapter16" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chapter16" type="462c0819:PsiDirectoryNode" />
+              <item name="config-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chapter16" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chapter16" type="462c0819:PsiDirectoryNode" />
+              <item name="config-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="shared" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chapter16" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chapter16" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chapter16" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chapter16" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chapter16" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chapter16" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chapter16" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chapter16" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chapter16" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chapter16" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qust" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chapter16" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chapter16" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qust" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chapter16" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chapter16" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qust" type="462c0819:PsiDirectoryNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chapter16" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chapter16" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qust" type="462c0819:PsiDirectoryNode" />
+              <item name="intercerter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chapter16" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chapter16" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qust" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chapter16" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chapter16" type="462c0819:PsiDirectoryNode" />
               <item name="kitchen-service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -592,6 +653,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="qust" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chapter16" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chapter16" type="462c0819:PsiDirectoryNode" />
+              <item name="kitchen-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qust" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="chapter16" type="b2602c69:ProjectViewProjectNode" />
@@ -681,7 +752,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="qust" type="462c0819:PsiDirectoryNode" />
-              <item name="feignclient" type="462c0819:PsiDirectoryNode" />
+              <item name="intercepter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="chapter16" type="b2602c69:ProjectViewProjectNode" />
@@ -691,7 +762,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="qust" type="462c0819:PsiDirectoryNode" />
-              <item name="intercepter" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="chapter16" type="b2602c69:ProjectViewProjectNode" />
@@ -707,12 +778,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RequestMappingsPanelOrder0" value="0" />
@@ -721,11 +791,11 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RequestMappingsPanelWidth2" value="75" />
-    <property name="SearchEverywhereHistoryKey" value="dis&#9;FILE&#9;jar://D:/resources/r1/org/springframework/spring-webmvc/4.3.8.RELEASE/spring-webmvc-4.3.8.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class&#10;StringBuil&#9;PSI&#9;JAVA://java.lang.StringBuilder&#10;AuthServiceClient&#9;FILE&#9;file://C:/Users/Administrator/Desktop/chapter16/user-service/src/main/java/com/qust/client/AuthServiceClient.java&#10;DefaultCorsProcessor&#9;FILE&#9;jar://D:/resources/r1/org/springframework/spring-web/4.3.8.RELEASE/spring-web-4.3.8.RELEASE.jar!/org/springframework/web/cors/DefaultCorsProcessor.class&#10;CorsConfiguration&#9;PSI&#9;JAVA://org.springframework.web.cors.CorsConfiguration&#10;dispatcherServlet&#9;FILE&#9;jar://D:/resources/r1/org/springframework/spring-webmvc/4.3.8.RELEASE/spring-webmvc-4.3.8.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class&#10;dispatchser&#9;PSI&#9;JAVA://org.springframework.web.servlet.DispatcherServlet" />
+    <property name="SearchEverywhereHistoryKey" value="dispa&#9;FILE&#9;jar://D:/resources/r1/org/springframework/spring-webmvc/4.3.8.RELEASE/spring-webmvc-4.3.8.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class&#10;dis&#9;FILE&#9;jar://D:/resources/r1/org/springframework/spring-webmvc/4.3.8.RELEASE/spring-webmvc-4.3.8.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class&#10;StringBuil&#9;PSI&#9;JAVA://java.lang.StringBuilder&#10;AuthServiceClient&#9;FILE&#9;file://C:/Users/Administrator/Desktop/chapter16/user-service/src/main/java/com/qust/client/AuthServiceClient.java&#10;DefaultCorsProcessor&#9;FILE&#9;jar://D:/resources/r1/org/springframework/spring-web/4.3.8.RELEASE/spring-web-4.3.8.RELEASE.jar!/org/springframework/web/cors/DefaultCorsProcessor.class&#10;CorsConfiguration&#9;PSI&#9;JAVA://org.springframework.web.cors.CorsConfiguration&#10;dispatcherServlet&#9;FILE&#9;jar://D:/resources/r1/org/springframework/spring-webmvc/4.3.8.RELEASE/spring-webmvc-4.3.8.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class&#10;dispatchser&#9;PSI&#9;JAVA://org.springframework.web.servlet.DispatcherServlet" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556585289946" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556977739893" />
+    <property name="last_opened_file_path" value="E:/code/spring boot back uplod/gs-rest-service/complete/pom.xml" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.41494253" />
@@ -759,7 +829,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.GatewayServiceApplication">
+  <component name="RunManager" selected="Spring Boot.KitchenServiceApplication">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -891,46 +961,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Admin" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="admin-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.forezp.AdminServiceApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AdminServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="admin-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qust.AdminServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Blog" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="blog-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.forezp.BlogServiceApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BlogServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="blog-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qust.BlogServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ClientServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="client-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.qust.ClientServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Config" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="config-server" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.forezp.ConfigServerApplication" />
+      <option name="VM_PARAMETERS" value="-Xms200m -Xmx200m " />
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -939,13 +973,7 @@
     <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="config-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.qust.ConfigServerApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Eureka" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="eureka-server" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.forezp.EurekaServerApplication" />
+      <option name="VM_PARAMETERS" value="-Xms200m -Xmx200m " />
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -954,13 +982,7 @@
     <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="eureka-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.qust.EurekaServerApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Gateway" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="gateway-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.forezp.GatewayServiceApplication" />
+      <option name="VM_PARAMETERS" value="-Xms200m -Xmx200m " />
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -969,19 +991,8 @@
     <configuration name="GatewayServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="gateway-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.qust.GatewayServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="KitchenApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="Kitchen" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.qust.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qust.KitchenApplication" />
+      <option name="VM_PARAMETERS" value="-Xms200m -Xmx200m " />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -989,20 +1000,7 @@
     <configuration name="KitchenServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="kitchen-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.qust.KitchenServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LogServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="log-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.forezp.LogServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Monitor" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="monitor-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.forezp.MonitorServiceApplication" />
+      <option name="VM_PARAMETERS" value="-Xms200m -Xmx200m " />
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -1011,6 +1009,8 @@
     <configuration name="MonitorServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="monitor-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.qust.MonitorServiceApplication" />
+      <option name="VM_PARAMETERS" value="-Xms200m -Xmx200m " />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -1018,43 +1018,7 @@
     <configuration name="SystemServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="system-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.qust.SystemServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Uaa" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="uaa-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.forezp.UaaServiceApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UaaServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="uaa-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qust.UaaServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="User" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="user-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.forezp.UserServiceApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="user-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qust.UserServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Zipkin" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="zipkin-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.forezp.ZipkinServiceApplication" />
+      <option name="VM_PARAMETERS" value="-Xms200m -Xmx200m " />
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -1063,6 +1027,8 @@
     <configuration name="ZipkinServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="zipkin-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.qust.ZipkinServiceApplication" />
+      <option name="VM_PARAMETERS" value="-Xms200m -Xmx200m " />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -1094,22 +1060,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.Eureka" />
-      <item itemvalue="Spring Boot.User" />
-      <item itemvalue="Spring Boot.Monitor" />
-      <item itemvalue="Spring Boot.Config" />
-      <item itemvalue="Spring Boot.Gateway" />
-      <item itemvalue="Spring Boot.Zipkin" />
-      <item itemvalue="Spring Boot.Uaa" />
-      <item itemvalue="Spring Boot.Admin" />
-      <item itemvalue="Spring Boot.Blog" />
-      <item itemvalue="Spring Boot.LogServiceApplication" />
-      <item itemvalue="Spring Boot.UserServiceApplication" />
-      <item itemvalue="Spring Boot.AdminServiceApplication" />
-      <item itemvalue="Spring Boot.UaaServiceApplication" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
       <item itemvalue="Spring Boot.GatewayServiceApplication" />
-      <item itemvalue="Spring Boot.BlogServiceApplication" />
       <item itemvalue="Spring Boot.ZipkinServiceApplication" />
       <item itemvalue="Spring Boot.MonitorServiceApplication" />
       <item itemvalue="Spring Boot.EurekaServerApplication" />
@@ -1117,11 +1069,9 @@
       <item itemvalue="Spring Boot.SystemServiceApplication" />
       <item itemvalue="Spring Boot.ClientServiceApplication" />
       <item itemvalue="JUnit.LogServiceApplicationTests.hello" />
-      <item itemvalue="Spring Boot.KitchenApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.KitchenApplication" />
         <item itemvalue="JUnit.LogServiceApplicationTests.hello" />
       </list>
     </recent_temporary>
@@ -1184,6 +1134,10 @@
       <workItem from="1556453777253" duration="3542000" />
       <workItem from="1556457732602" duration="2269000" />
       <workItem from="1556500264287" duration="32503000" />
+      <workItem from="1556585141531" duration="26624000" />
+      <workItem from="1556847187504" duration="23725000" />
+      <workItem from="1556933581850" duration="12627000" />
+      <workItem from="1557022251142" duration="20149000" />
     </task>
     <task id="LOCAL-00001" summary="提交">
       <created>1556454054677</created>
@@ -1192,7 +1146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556454054677</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="提交">
+      <created>1556585358567</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1556585358567</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1228,16 +1189,16 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="344751000" />
+    <option name="totallyTimeSpent" value="427876000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="Capture Tool" order="1" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Image Layers" order="3" />
-      <window_info content_ui="combo" id="Project" order="4" sideWeight="0.49863014" visible="true" weight="0.28721684" />
+      <window_info content_ui="combo" id="Project" order="4" sideWeight="0.49863014" visible="true" weight="0.262945" />
       <window_info id="Favorites" order="5" sideWeight="0.50136983" side_tool="true" weight="0.28721684" />
       <window_info id="Structure" order="6" weight="0.25" />
       <window_info id="Nl-Palette" order="7" />
@@ -1246,14 +1207,14 @@
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Java Enterprise" order="2" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.22024867" />
-      <window_info anchor="bottom" id="Find" order="4" sideWeight="0.6982201" weight="0.3463588" />
+      <window_info anchor="bottom" id="Find" order="4" sideWeight="0.6982201" weight="0.6642984" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.3285968" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3285968" />
-      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.82686085" weight="0.6625222" />
-      <window_info anchor="bottom" id="Debug" order="10" sideWeight="0.7411003" weight="0.55239785" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3250444" />
+      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.82686085" weight="0.73889875" />
+      <window_info active="true" anchor="bottom" id="Debug" order="10" sideWeight="0.7411003" visible="true" weight="0.60746" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3587922" />
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" id="LuaCheck" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
@@ -1277,23 +1238,23 @@
       <window_info id="Capture Tool" order="1" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Image Layers" order="3" />
-      <window_info content_ui="combo" id="Project" order="4" visible="true" weight="0.30987054" />
-      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="4" sideWeight="0.49863014" visible="true" weight="0.33090615" />
+      <window_info id="Favorites" order="5" sideWeight="0.50136983" side_tool="true" weight="0.28721684" />
       <window_info id="Structure" order="6" weight="0.25" />
       <window_info id="Nl-Palette" order="7" />
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.2588997" side_tool="true" weight="0.5159575" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Java Enterprise" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Find" order="4" sideWeight="0.6982201" weight="0.42553192" />
+      <window_info anchor="bottom" id="Version Control" order="3" weight="0.22024867" />
+      <window_info anchor="bottom" id="Find" order="4" sideWeight="0.6982201" weight="0.3463588" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.82686085" weight="0.39184397" />
-      <window_info active="true" anchor="bottom" id="Debug" order="10" sideWeight="0.7411003" visible="true" weight="0.49113476" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.16843972" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.3285968" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3285968" />
+      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.82686085" weight="0.21136767" />
+      <window_info anchor="bottom" id="Debug" order="10" sideWeight="0.7411003" weight="0.23801066" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3250444" />
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" id="LuaCheck" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
@@ -1309,7 +1270,7 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Capture Analysis" order="9" />
       <window_info anchor="right" id="Ant Build" order="10" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="11" side_tool="true" weight="0.32969153" />
+      <window_info anchor="right" id="Coverage" order="11" side_tool="true" weight="0.32902184" />
       <window_info anchor="right" id="Key Promoter X" order="12" />
     </layout-to-restore>
   </component>
@@ -1406,33 +1367,21 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/gateway-service/src/main/java/com/qust/filter/AccessFilter.java</url>
-          <line>43</line>
-          <properties />
-          <option name="timeStamp" value="65" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/gateway-service/src/main/java/com/qust/filter/AccessFilter.java</url>
-          <line>24</line>
+          <line>30</line>
           <properties />
           <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/gateway-service/src/main/java/com/qust/filter/AccessFilter.java</url>
-          <line>66</line>
+          <line>94</line>
           <properties />
           <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/common/src/main/java/com/qust/Jwt/JwtUtil.java</url>
-          <line>39</line>
+          <line>40</line>
           <properties />
           <option name="timeStamp" value="71" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/common/src/main/java/com/qust/Jwt/JwtUtil.java</url>
-          <line>51</line>
-          <properties />
-          <option name="timeStamp" value="73" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/system-service/src/main/java/com/qust/web/SystemController.java</url>
@@ -1445,12 +1394,6 @@
           <line>57</line>
           <properties />
           <option name="timeStamp" value="76" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/client-service/src/main/java/com/qust/service/OrderService.java</url>
-          <line>43</line>
-          <properties />
-          <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/system-service/src/main/java/com/qust/service/InfoMessageService.java</url>
@@ -1478,15 +1421,9 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/gateway-service/src/main/java/com/qust/config/WebMvcConfig.java</url>
-          <line>14</line>
+          <line>12</line>
           <properties />
           <option name="timeStamp" value="91" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/gateway-service/src/main/java/com/qust/config/WebMvcConfig.java</url>
-          <line>20</line>
-          <properties />
-          <option name="timeStamp" value="92" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/gateway-service/src/main/java/com/qust/intercerter/TokenIntercepter.java</url>
@@ -1513,58 +1450,148 @@
           <option name="timeStamp" value="108" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.8.RELEASE/spring-webmvc-4.3.8.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class</url>
-          <line>419</line>
-          <properties />
-          <option name="timeStamp" value="109" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/client-service/src/main/java/com/qust/web/OrderControler.java</url>
-          <line>43</line>
+          <line>45</line>
           <properties />
           <option name="timeStamp" value="113" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/client-service/src/main/java/com/qust/web/OrderControler.java</url>
-          <line>28</line>
+          <line>30</line>
           <properties />
           <option name="timeStamp" value="114" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/client-service/src/main/java/com/qust/service/OrderService.java</url>
-          <line>121</line>
+          <line>125</line>
           <properties />
           <option name="timeStamp" value="116" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/client-service/src/main/java/com/qust/web/OrderControler.java</url>
-          <line>51</line>
+          <line>53</line>
           <properties />
           <option name="timeStamp" value="117" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/client-service/src/main/java/com/qust/service/OrderService.java</url>
-          <line>160</line>
+          <line>166</line>
           <properties />
           <option name="timeStamp" value="119" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/service/CodeService.java</url>
-          <line>19</line>
+          <line>20</line>
           <properties />
           <option name="timeStamp" value="121" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/client-service/src/main/java/com/qust/service/OrderService.java</url>
-          <line>171</line>
+          <line>177</line>
           <properties />
           <option name="timeStamp" value="122" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/client-service/src/main/java/com/qust/service/OrderService.java</url>
-          <line>91</line>
+          <line>94</line>
           <properties />
           <option name="timeStamp" value="124" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/service/CodeService.java</url>
+          <line>14</line>
+          <properties />
+          <option name="timeStamp" value="126" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/client-service/src/main/java/com/qust/web/OrderControler.java</url>
+          <line>72</line>
+          <properties />
+          <option name="timeStamp" value="130" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/client-service/src/main/java/com/qust/service/OrderService.java</url>
+          <line>229</line>
+          <properties />
+          <option name="timeStamp" value="131" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/client-service/src/main/java/com/qust/web/OrderControler.java</url>
+          <line>77</line>
+          <properties />
+          <option name="timeStamp" value="134" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/web/KitchenController.java</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="135" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/service/MaterialService.java</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="136" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/gateway-service/src/main/java/com/qust/util/HttpBodyAnaly.java</url>
+          <line>17</line>
+          <properties />
+          <option name="timeStamp" value="142" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/service/MaterialService.java</url>
+          <line>49</line>
+          <properties />
+          <option name="timeStamp" value="143" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/client-service/src/main/java/com/qust/service/OrderService.java</url>
+          <line>200</line>
+          <properties />
+          <option name="timeStamp" value="144" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/client-service/src/main/java/com/qust/service/OrderService.java</url>
+          <line>50</line>
+          <properties />
+          <option name="timeStamp" value="145" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/client-service/src/main/java/com/qust/service/OrderService.java</url>
+          <line>82</line>
+          <properties />
+          <option name="timeStamp" value="146" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/web/FoodController.java</url>
+          <line>31</line>
+          <properties />
+          <option name="timeStamp" value="147" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/service/FoodService.java</url>
+          <line>66</line>
+          <properties />
+          <option name="timeStamp" value="148" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/service/FoodService.java</url>
+          <line>154</line>
+          <properties />
+          <option name="timeStamp" value="149" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/service/FoodService.java</url>
+          <line>163</line>
+          <properties />
+          <option name="timeStamp" value="150" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/service/FoodService.java</url>
+          <line>182</line>
+          <properties />
+          <option name="timeStamp" value="151" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -1577,224 +1604,38 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/system-service/src/main/java/com/qust/entity/User.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/auth0/java-jwt/3.3.0/java-jwt-3.3.0.jar!/com/auth0/jwt/interfaces/Payload.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="326">
+          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system-service/src/main/java/com/qust/entity/Staff.java">
+    <entry file="file://$PROJECT_DIR$/system-service/src/main/java/com/qust/util/HttpUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="18" column="24" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="24" />
+        <state relative-caret-position="-801">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system-service/src/main/java/com/qust/entity/SalaryFlow.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/Map.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="60" column="33" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
-          <folding>
-            <element signature="e#429#430#0" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
-            <element signature="e#488#489#0" expanded="true" />
-            <element signature="e#516#517#0" expanded="true" />
-            <element signature="e#546#547#0" expanded="true" />
-            <element signature="e#574#575#0" expanded="true" />
-            <element signature="e#614#615#0" expanded="true" />
-            <element signature="e#648#649#0" expanded="true" />
-            <element signature="e#683#684#0" expanded="true" />
-            <element signature="e#716#717#0" expanded="true" />
-            <element signature="e#766#767#0" expanded="true" />
-            <element signature="e#810#811#0" expanded="true" />
-            <element signature="e#842#843#0" expanded="true" />
-            <element signature="e#871#872#0" expanded="true" />
-            <element signature="e#914#915#0" expanded="true" />
-            <element signature="e#950#951#0" expanded="true" />
-            <element signature="e#979#980#0" expanded="true" />
-            <element signature="e#1006#1007#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="109">
+          <caret line="211" column="6" selection-start-line="211" selection-start-column="6" selection-end-line="211" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system-service/src/main/java/com/qust/entity/RestaurantMember.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="52" column="39" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
-          <folding>
-            <element signature="e#530#531#0" expanded="true" />
-            <element signature="e#555#556#0" expanded="true" />
-            <element signature="e#589#590#0" expanded="true" />
-            <element signature="e#617#618#0" expanded="true" />
-            <element signature="e#646#647#0" expanded="true" />
-            <element signature="e#673#674#0" expanded="true" />
-            <element signature="e#711#712#0" expanded="true" />
-            <element signature="e#743#744#0" expanded="true" />
-            <element signature="e#778#779#0" expanded="true" />
-            <element signature="e#811#812#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system-service/src/main/java/com/qust/entity/Position.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/qust/Jwt/JwtUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eureka-server/src/main/java/com/qust/EurekaServerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config-server/src/main/resources/shared/gateway-service-pro.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config-server/src/main/resources/shared/client-service-pro.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config-server/src/main/resources/shared/kitchen-service-pro.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eureka-server/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-35" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config-server/src/main/resources/shared/system-service-pro.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="31" column="7" lean-forward="true" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system-service/src/main/java/com/qust/service/InfoMessageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
-          <folding>
-            <element signature="e#1953#1954#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/transaction/javax.transaction-api/1.2/javax.transaction-api-1.2.jar!/javax/transaction/Transactional.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zipkin-service/src/main/java/com/qust/ZipkinServiceApplication.java">
+    <entry file="file://$PROJECT_DIR$/system-service/src/main/java/com/qust/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config-server/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config-server/src/main/java/com/qust/ConfigServerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/qust/GatewayServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/StringBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1868">
-          <caret line="179" column="24" selection-start-line="179" selection-start-column="11" selection-end-line="179" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/StringBuffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1191">
-          <caret line="96" column="20" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="434" selection-start-line="434" selection-end-line="434" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Integer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="830" selection-start-line="830" selection-end-line="830" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="106" column="3" selection-start-line="106" selection-start-column="3" selection-end-line="106" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/RawMaterial.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/CodeOrderPk.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system-service/src/main/java/com/qust/feignclient/ClientClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="14" column="47" lean-forward="true" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+          <caret line="67" column="15" selection-start-line="67" selection-start-column="15" selection-end-line="67" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/system-service/src/main/java/com/qust/web/SystemController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="151">
+          <caret line="48" column="36" lean-forward="true" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
           <folding>
             <element signature="e#2160#2161#0" expanded="true" />
             <element signature="e#2225#2226#0" expanded="true" />
@@ -1802,202 +1643,362 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-service/src/main/java/com/qust/entity/OrderDetailPk.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/CodeOrderDao.java">
+    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/qust/util.java" />
+    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/qust/intercerter/TokenIntercepter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
-          <caret line="6" column="29" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="29" />
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system-service/src/main/java/com/qust/dao/InfoMessageDao.java">
+    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/qust/intercerter/ResponseCode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="24" selection-end-column="14" />
+        <state relative-caret-position="76">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/CodeOrder.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        <state relative-caret-position="154">
+          <caret line="206" column="53" selection-start-line="206" selection-start-column="47" selection-end-line="206" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-service/src/main/java/com/qust/feignclient/KitchenClient.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/AbstractStringBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+        <state relative-caret-position="97">
+          <caret line="929" column="22" lean-forward="true" selection-start-line="929" selection-start-column="22" selection-end-line="929" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.14/tomcat-embed-core-8.5.14.jar!/javax/servlet/http/HttpServletRequest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/qust/config/WebMvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-service/src/main/java/com/qust/entity/Client.java">
+    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/qust/filter/AccessFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system-service/src/main/java/com/qust/entity/InfoMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="75" column="5" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="75" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-service/src/main/java/com/qust/entity/ClientInfomation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-209">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/KitchenServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-service/src/main/java/com/qust/dao/OrderDetailDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/reflect/InvocationTargetException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Long.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="837" selection-start-line="837" selection-end-line="837" />
-          <folding>
-            <element signature="e#37396#37397#0" expanded="true" />
-            <element signature="e#37424#37425#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="59">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client-service/src/main/java/com/qust/entity/OrderDetail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        <state relative-caret-position="-114">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/github/openfeign/feign-hystrix/9.4.0/feign-hystrix-9.4.0.jar!/feign/hystrix/HystrixInvocationHandler.class">
+    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/qust/util/HttpBodyAnaly.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/web/KitchenController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="239">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#753#754#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.8.RELEASE/spring-web-4.3.8.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+    <entry file="file://$PROJECT_DIR$/client-service/src/main/java/com/qust/entity/ClientInfomation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.8.RELEASE/spring-webmvc-4.3.8.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-19">
-          <caret line="28" column="36" lean-forward="true" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-service/src/main/java/com/qust/web/ClientControler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="266">
+          <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client-service/src/main/java/com/qust/entity/FoodOrder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="53" column="25" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="25" />
+        <state relative-caret-position="892">
+          <caret line="158" selection-start-line="158" selection-end-line="158" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#894#895#0" expanded="true" />
             <element signature="e#923#924#0" expanded="true" />
             <element signature="e#967#968#0" expanded="true" />
             <element signature="e#1003#1004#0" expanded="true" />
-            <element signature="e#853#854#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-service/src/main/java/com/qust/dao/FoodOrderDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client-service/src/main/java/com/qust/web/OrderControler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="79">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2478#2479#0" expanded="true" />
+            <element signature="e#2539#2540#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client-service/src/main/java/com/qust/service/OrderService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="102" column="34" selection-start-line="102" selection-start-column="28" selection-end-line="102" selection-end-column="34" />
+        <state relative-caret-position="155">
+          <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.8.RELEASE/spring-webmvc-4.3.8.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
+    <entry file="file://$PROJECT_DIR$/client-service/src/main/java/com/qust/dao/FoodOrderDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="413" selection-start-line="413" selection-end-line="413" />
+        <state relative-caret-position="3">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/qust/annotation/SysLogger.java" />
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/qust/util.java" />
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/qust/Jwt/JwtUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="50" column="28" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/qust/exception/CommonException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/qust/exception/ErrorCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/qust/dto/RespDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/qust/util/CreateId.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/FoodImageDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="77" selection-start-line="6" selection-start-column="77" selection-end-line="6" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config-server/src/main/resources/shared/kitchen-service-pro.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/service/MaterialService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="26" column="23" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/RawMarerialOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/OrderFinsh.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="50" column="39" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/CodeOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="86" column="39" selection-start-line="86" selection-start-column="39" selection-end-line="86" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/CodeOrderDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/LinkedHashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="162" column="13" selection-start-line="162" selection-start-column="13" selection-end-line="162" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/service/CodeService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="608">
+          <caret line="42" column="76" selection-start-line="42" selection-start-column="76" selection-end-line="42" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/FoodClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding>
+            <element signature="e#404#405#0" expanded="true" />
+            <element signature="e#432#433#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/FoodClassPk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.8.RELEASE/spring-web-4.3.8.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1995">
+          <caret line="122" selection-start-line="122" selection-end-line="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/FoodClassDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="11" column="15" selection-start-line="11" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/RawMaterialDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="30" column="47" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="30" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/web/KitchenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/FoodNeed.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-152">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/FoodNeedPk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+          <folding>
+            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#500#501#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/RawMaterial.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/FoodNeedDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="26" column="23" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/web/FoodController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="54" column="29" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#963#964#0" expanded="true" />
+            <element signature="e#1003#1004#0" expanded="true" />
+            <element signature="e#1399#1400#0" expanded="true" />
+            <element signature="e#1443#1444#0" expanded="true" />
+            <element signature="e#1824#1825#0" expanded="true" />
+            <element signature="e#1864#1865#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/FoodMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="90" column="24" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/FoodMenuDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/service/FoodService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="195" column="72" selection-start-line="195" selection-start-column="72" selection-end-line="195" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.8.RELEASE/spring-webmvc-4.3.8.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="413" selection-start-line="413" selection-end-line="413" />
         </state>
       </provider>
     </entry>

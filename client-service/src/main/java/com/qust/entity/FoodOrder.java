@@ -18,7 +18,7 @@ public class FoodOrder implements Serializable {
     private Long client;
 
     @Column
-    private Date createTime;
+    private Timestamp createTime;
 
     @Column
     private char flow;
@@ -49,7 +49,7 @@ public class FoodOrder implements Serializable {
     @Column
     private Long restaurant;
     @Column
-    private Date accessTime;
+    private Timestamp accessTime;
     @Column
     private String reason;
 
@@ -69,11 +69,11 @@ public class FoodOrder implements Serializable {
         this.flag = flag;
     }
 
-    public Date getAccessTime() {
+    public Timestamp getAccessTime() {
         return accessTime;
     }
 
-    public void setAccessTime(Date accessTime) {
+    public void setAccessTime(Timestamp accessTime) {
         this.accessTime = accessTime;
     }
 
@@ -109,11 +109,11 @@ public class FoodOrder implements Serializable {
         this.client = client;
     }
 
-    public Date getCreateTime() {
+    public Timestamp getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(Timestamp createTime) {
         this.createTime = createTime;
     }
 
@@ -156,7 +156,6 @@ public class FoodOrder implements Serializable {
     public void setPrice(int price) {
         this.price = price;
     }
-
 
     public int getPeople() {
         return people;

@@ -4,7 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import java.io.Serializable;
-import java.sql.Date;
+import java.sql.Timestamp;
 
 @Entity
 public class OrderFinsh implements Serializable {
@@ -16,7 +16,7 @@ public class OrderFinsh implements Serializable {
     private int count;
 
     @Column
-    private Date createTime;
+    private Timestamp createTime;
 
     @Column
     private String remark;
@@ -44,11 +44,11 @@ public class OrderFinsh implements Serializable {
         this.count = count;
     }
 
-    public Date getCreateTime() {
+    public Timestamp getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(Timestamp createTime) {
         this.createTime = createTime;
     }
 

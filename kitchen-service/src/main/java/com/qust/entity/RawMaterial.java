@@ -14,7 +14,7 @@ public class RawMaterial implements Serializable{
     @Id
     private Long id;
     @Column
-    private  String name;
+    private  String mname;
     // 食材或者损耗品
     @Column
     private  char flag;
@@ -32,11 +32,11 @@ public class RawMaterial implements Serializable{
     }
 
     public String getName() {
-        return name;
+        return mname;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.mname = name;
     }
 
     public char getFlag() {

@@ -5,6 +5,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.io.Serializable;
+import java.sql.Timestamp;
+
 @Entity
 public class FoodMenu implements Serializable {
 
@@ -15,15 +17,15 @@ public class FoodMenu implements Serializable {
     @Column
     private String name;
     @Column
-    private Integer foodclass;
+    private Long foodclass;
     @Column
     private int sellNumber;
     @Column
-    private String createTime;
+    private Timestamp createTime;
     @Column
     private int price;
     @Column
-    private String desciption;
+    private String description;
     @Column
     private int timeCost;
     @Column
@@ -49,11 +51,11 @@ public class FoodMenu implements Serializable {
         this.name = name;
     }
 
-    public Integer getFoodclass() {
+    public Long getFoodclass() {
         return foodclass;
     }
 
-    public void setFoodclass(Integer foodclass) {
+    public void setFoodclass(Long foodclass) {
         this.foodclass = foodclass;
     }
 
@@ -65,11 +67,11 @@ public class FoodMenu implements Serializable {
         this.sellNumber = sellNumber;
     }
 
-    public String getCreateTime() {
+    public Timestamp getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(String createTime) {
+    public void setCreateTime(Timestamp createTime) {
         this.createTime = createTime;
     }
 
@@ -82,11 +84,11 @@ public class FoodMenu implements Serializable {
     }
 
     public String getDesciption() {
-        return desciption;
+        return description;
     }
 
     public void setDesciption(String desciption) {
-        this.desciption = desciption;
+        this.description = desciption;
     }
 
     public int getTimeCost() {
