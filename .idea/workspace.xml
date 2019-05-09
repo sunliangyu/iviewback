@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86d61acd-ccd4-468c-8c02-6241cf989e15" name="Default" comment="增加菜单的处理维护">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-service/src/main/java/com/qust/dao/FoodOrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-service/src/main/java/com/qust/dao/FoodOrderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-service/src/main/java/com/qust/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-service/src/main/java/com/qust/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-service/src/main/java/com/qust/web/OrderControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-service/src/main/java/com/qust/web/OrderControler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/RawMarerialOrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/RawMarerialOrderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/RawMaterialDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/dao/RawMaterialDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/RawMarerialOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/RawMarerialOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/RawMaterial.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/entity/RawMaterial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/service/CodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/service/CodeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/service/MaterialService.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/service/MaterialService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/web/KitchenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/com/qust/web/KitchenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="86d61acd-ccd4-468c-8c02-6241cf989e15" name="Default" comment="实现支出的增加以及查询" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/eureka-server/target/" />
@@ -114,7 +98,7 @@
           <entry key="ft" value="4" />
           <entry key="java" value="37253" />
           <entry key="log" value="1" />
-          <entry key="txt" value="27" />
+          <entry key="txt" value="36" />
           <entry key="xml" value="203" />
           <entry key="yml" value="210" />
         </counts>
@@ -123,7 +107,7 @@
         <counts>
           <entry key="CLASS" value="3" />
           <entry key="JAVA" value="37252" />
-          <entry key="PLAIN_TEXT" value="82" />
+          <entry key="PLAIN_TEXT" value="91" />
           <entry key="SQL" value="1" />
           <entry key="VTL" value="4" />
           <entry key="XML" value="203" />
@@ -376,7 +360,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-11" />
     <option name="y" value="-11" />
     <option name="width" value="915" />
@@ -1304,7 +1288,7 @@
       <workItem from="1557192209362" duration="8992000" />
       <workItem from="1557275783647" duration="14868000" />
       <workItem from="1557323795516" duration="6435000" />
-      <workItem from="1557361932653" duration="2871000" />
+      <workItem from="1557361932653" duration="3186000" />
     </task>
     <task id="LOCAL-00001" summary="提交">
       <created>1556454054677</created>
@@ -1341,7 +1325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1557061890659</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="实现支出的增加以及查询">
+      <created>1557364942378</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1557364942379</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1377,10 +1368,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="486480000" />
+    <option name="totallyTimeSpent" value="486795000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="Capture Tool" order="1" />
@@ -1394,14 +1385,14 @@
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.2588997" side_tool="true" weight="0.5159575" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Java Enterprise" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="3" weight="0.4582593" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="3" visible="true" weight="0.4582593" />
       <window_info anchor="bottom" id="Find" order="4" sideWeight="0.6982201" weight="0.6642984" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.3285968" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3285968" />
       <window_info anchor="bottom" id="Run" order="9" sideWeight="0.82686085" weight="0.57726467" />
-      <window_info active="true" anchor="bottom" id="Debug" order="10" sideWeight="0.7411003" visible="true" weight="0.6554174" />
+      <window_info anchor="bottom" id="Debug" order="10" sideWeight="0.7411003" weight="0.55239785" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3587922" />
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" id="LuaCheck" order="13" />
@@ -1479,7 +1470,8 @@
     </ignored-roots>
     <MESSAGE value="提交" />
     <MESSAGE value="增加菜单的处理维护" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加菜单的处理维护" />
+    <MESSAGE value="实现支出的增加以及查询" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现支出的增加以及查询" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2094,6 +2086,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <element signature="e#583#584#0" expanded="true" />
+            <element signature="e#610#611#0" expanded="true" />
+            <element signature="e#650#651#0" expanded="true" />
+            <element signature="e#682#683#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
