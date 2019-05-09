@@ -77,4 +77,15 @@ public class OrderControler {
     public List<Integer> getBar(@RequestParam Long restaurant){
         return orderService.getOldCount(restaurant,new Date(System.currentTimeMillis()));
     }
+
+    /**
+    *订单分页查询
+    *@Param [map]
+    *@Return java.util.Map<java.lang.String,java.lang.Object>
+    *@Author 孙良玉
+    */
+    @PostMapping("/orderpage")
+    public Map<String,Object> orderPage (@RequestBody Map<String,Object> map){
+        return orderService.orderPage(map);
+    }
 }

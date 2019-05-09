@@ -18,6 +18,7 @@
         <module>common</module>
         <module>kitchen-service</module>
         <module>client-service</module>
+        <module>file-service</module>
     </modules>
 
     <parent>

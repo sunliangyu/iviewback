@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
 import javax.transaction.Transactional;
+import java.sql.Timestamp;
 import java.util.List;
 
 public interface RawMaterialDao extends JpaRepository<RawMaterial,Long> {
@@ -29,5 +30,10 @@ public interface RawMaterialDao extends JpaRepository<RawMaterial,Long> {
     @Modifying
     @Query(value = "delete from raw_material where restaurant = ?2 and id = ?1",nativeQuery = true)
     void deleteById(Long id , Long restaurant);
+
+    @Transactional
+    @Modifying
+    @Query(value = "update raw_material  set count = count + ?3 , update_time = ?4  where restaurant = ?2 and id = ?1",nativeQuery = true)
+    void add(Long id , Long restaurant, int count , Timestamp time );
 
 }

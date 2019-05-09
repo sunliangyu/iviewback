@@ -12,6 +12,7 @@
         <module name="common" />
         <module name="config-server" />
         <module name="eureka-server" />
+        <module name="file-service" />
         <module name="gateway-service" />
         <module name="kitchen-service" />
         <module name="monitor-service" />
@@ -29,6 +30,7 @@
       <module name="common" target="1.8" />
       <module name="config-server" target="1.8" />
       <module name="eureka-server" target="1.8" />
+      <module name="file-service" target="1.8" />
       <module name="gateway-service" target="1.8" />
       <module name="Kitchen" target="1.8" />
       <module name="kitchen-service" target="1.8" />

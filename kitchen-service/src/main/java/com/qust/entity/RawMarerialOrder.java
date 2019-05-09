@@ -24,6 +24,16 @@ public class RawMarerialOrder implements Serializable {
     private Timestamp createTime;
     @Column
     private String remark;
+    @Column
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public Long getRestaurant() {
         return restaurant;

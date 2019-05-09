@@ -45,4 +45,25 @@ public interface FoodOrderDao extends JpaRepository<FoodOrder, Long> {
 
     @Query(value = "SELECT  count(*) from food_order where restaurant = ?1 AND  flag = ?2  ", nativeQuery = true)
     int getCountOrder (Long restaurant , Boolean flag);
+
+    @Query(value = "SELECT count(*) from food_order where restaurant = ?1 and  create_time >= ?2  and create_time <= ?3  and flow in ?4  and flag in ?5 order BY create_time desc ", nativeQuery = true)
+    int findCount(Long restaurant, String start , String stop , List condition , List quality);
+
+    @Query(value = "SELECT count(*) from food_order where restaurant = ?1   and flow in ?2  and flag in ?3 order BY create_time desc ", nativeQuery = true)
+    int findCount(Long restaurant, List condition , List quality);
+
+    @Query(value = "SELECT indent,create_time,flag,flow from food_order where restaurant = ?1 and  create_time >= ?2  and create_time <= ?3  and flow in ?4  and flag in ?5 order BY create_time desc  limit ?6, 10", nativeQuery = true)
+    List<Object[]> findPage(Long restaurant, String start , String stop , List condition , List quality , int a );
+
+    @Query(value = "SELECT indent,create_time,flag,flow from food_order where restaurant = ?1   and flow in ?2  and flag in ?3 order BY create_time desc limit ?4, 10 ", nativeQuery = true)
+    List<Object[]> findPage(Long restaurant, List condition , List quality ,int  a );
+
+    @Query(value = "SELECT sum(price) from food_order where restaurant = ?1   and flow = 'd' and  create_time >= ?2  and create_time <= ?3  and flag in ?4  ", nativeQuery = true)
+    int getinput (Long restaurant, String start, String stop , List quality );
+
+    @Query(value = "SELECT sum(price) from food_order where restaurant = ?1   and flow = 'd'  and flag in ?2 ", nativeQuery = true)
+    int getinput (Long restaurant, List quality );
+
+
+
 }

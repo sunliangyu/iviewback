@@ -60,4 +60,17 @@ public class KitchenController {
     public void deleteMaterial (@RequestParam  Map<String,Object> map){
         materialService.deleteMaterial(map);
     }
+
+
+    @PostMapping("addoutflow")
+    public void addoutflow (@RequestBody Map<String,Object> map) {
+        materialService.addoutflow(map);
+    }
+
+    @PostMapping(value = "/getMateFlow")
+    public Map<String,Object>   getMateFlow (@RequestBody Map<String,Object> map) {
+        return materialService.getMateFlow(map);
+    }
+
+
 }

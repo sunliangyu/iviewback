@@ -264,5 +264,95 @@ public class OrderService {
         return list;
     }
 
+
+    public Map<String,Object> orderPage (Map<String,Object> map) {
+        List condition = (ArrayList)map.get("condition");
+        List quality = (ArrayList)map.get("quality");
+        if (quality.size() == 2) {
+            quality.clear();
+            quality.add(true);
+            quality.add(false);
+        } else {
+            if(String.valueOf(quality.get(0)).equals("Y")){
+                quality.clear();
+                quality.add(true);
+            }else{
+                quality.clear();
+                quality.add(false);
+            }
+        }
+        Long restaurant = Long.valueOf(String.valueOf(map.get("restaurant")));
+        Object st = map.get("start");
+        Object page = map.get("page");
+        if(st != null ) {
+            List list  = (List)st;
+            String start =  String.valueOf(list.get(0));
+            String stop =  String.valueOf(list.get(1));
+            return this.getorderpage(restaurant,start,stop,page,condition,quality);
+        }
+        return this.getorderpage(restaurant,condition,quality,page);
+    }
+
+    public Map<String,Object>  getorderpage (Long restaurant , String start , String stop ,Object page  ,List condation , List quality) {
+        Map<String,Object> result = new HashMap<>();
+        int count;
+        if(page == null) {
+            if(condation.contains("d")){
+                int price = foodOrderDao.getinput(restaurant,start,stop,quality);
+                result.put("input",price);
+            } else {
+                result.put("input",0);
+            }
+            count = foodOrderDao.findCount(restaurant,start,stop,condation,quality);
+            result.put("all",count);
+            if (count == 0){
+                return  result;
+            }
+            count = 0;
+        } else {
+            count = (Integer)page;
+        }
+        List<Object[]> list = foodOrderDao.findPage(restaurant,start,stop,condation,quality,count  * 10 );
+        result.put("page",this.createorder(list));
+        return result;
+    }
+
+    public Map<String,Object>  getorderpage (Long restaurant  ,List condation , List quality , Object page) {
+        Map<String,Object> result = new HashMap<>();
+        int count;
+        if(page == null) {
+            if(condation.contains("d")){
+                int price = foodOrderDao.getinput(restaurant,quality);
+                result.put("input",price);
+            } else {
+                result.put("input",0);
+            }
+            count = foodOrderDao.findCount(restaurant,condation,quality);
+            result.put("all",count);
+            if (count == 0){
+                return  result;
+            }
+            count = 0;
+        } else {
+            count = (Integer)page;
+        }
+        List<Object[]> list = foodOrderDao.findPage(restaurant,condation,quality,count  * 10 );
+        result.put("page",this.createorder(list));
+        return result;
+    }
+
+
+    public List<Map<String,Object>> createorder (List<Object[]> list ) {
+        List<Map<String,Object>> result = new LinkedList<>();
+        for( Object[] objects : list) {
+            Map<String,Object> map = new HashMap<>();
+            map.put("id",Integer.valueOf(String.valueOf(objects[0])));
+            map.put("time", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format((Timestamp)objects[1]));
+            map.put("flag",objects[2]);
+            map.put("flow",objects[3]);
+            result.add(map);
+        }
+        return result;
+    }
 }
 

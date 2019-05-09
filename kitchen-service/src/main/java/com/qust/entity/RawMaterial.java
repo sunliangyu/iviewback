@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.io.Serializable;
 import java.sql.Date;
+import java.sql.Timestamp;
 
 @Entity
 public class RawMaterial implements Serializable{
@@ -19,9 +20,11 @@ public class RawMaterial implements Serializable{
     @Column
     private  char flag;
     @Column
-    private Date updateTime;
+    private Timestamp updateTime;
     @Column
     private int  count;
+    @Column
+    private int saveTime;
 
     public Long getId() {
         return id;
@@ -47,11 +50,11 @@ public class RawMaterial implements Serializable{
         this.flag = flag;
     }
 
-    public Date getUpdateTime() {
+    public Timestamp getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(Date updateTime) {
+    public void setUpdateTime(Timestamp updateTime) {
         this.updateTime = updateTime;
     }
 
@@ -71,8 +74,6 @@ public class RawMaterial implements Serializable{
         this.saveTime = saveTime;
     }
 
-    @Column
-    private int saveTime;
 
     public Long getRestaurant() {
         return restaurant;
