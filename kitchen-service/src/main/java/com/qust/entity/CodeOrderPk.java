@@ -11,7 +11,7 @@ public class CodeOrderPk  implements Serializable {
     private Long  indent;
 
     @Column
-    private Long restayrant;
+    private Long restaurant;
 
     @Column
     private long food;
@@ -33,10 +33,10 @@ public class CodeOrderPk  implements Serializable {
     }
 
     public Long getRestayrant() {
-        return restayrant;
+        return restaurant;
     }
 
     public void setRestayrant(Long restayrant) {
-        this.restayrant = restayrant;
+        this.restaurant = restayrant;
     }
 }

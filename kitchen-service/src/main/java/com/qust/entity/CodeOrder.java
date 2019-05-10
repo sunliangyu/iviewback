@@ -28,9 +28,26 @@ public class CodeOrder implements Serializable {
     private Long selectStaff;
     @Column
     private Long codeStaff;
-
     @Column
     private String evaluation;
+    @Column
+    private String name;
+
+    public String getEvaluation() {
+        return evaluation;
+    }
+
+    public void setEvaluation(String evaluation) {
+        this.evaluation = evaluation;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public CodeOrderPk getId() {
         return id;

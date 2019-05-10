@@ -40,9 +40,13 @@ public class CodeService {
                 codeOrder.setRemark((String)object);
             }
             codeOrder.setCreateTime(new Timestamp(System.currentTimeMillis()));
+            String name = String.valueOf(food.get("name"));
+            codeOrder.setName(name);
             codeOrderDao.save(codeOrder);
         }
     }
+
+
 
 
 }

@@ -13,6 +13,9 @@ public interface FoodMenuDao extends JpaRepository<FoodMenu,Long> {
     @Query(value = "SELECT id,name  from food_menu where restaurant = ?1  and  foodclass = ?2", nativeQuery = true)
     List<Object[]>  getFoodByClass ( Long restaurant, Long type);
 
+    @Query(value = "SELECT id,name  from food_menu where restaurant = ?1  ", nativeQuery = true)
+    List<Object[]>  getFoos ( Long restaurant);
+
     @Transactional
     @Modifying
     @Query(value = "delete from food_menu where restaurant = ?2 and id = ?1",nativeQuery = true)

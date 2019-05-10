@@ -25,4 +25,8 @@ public interface FoodNeedDao extends JpaRepository<FoodNeed, FoodNeedPk> {
     @Modifying
     @Query(value = "delete from food_need where restaurant = ?2 and food= ?1 and  material = ?3",nativeQuery = true)
     void deleteByIdFood(Long id , Long restaurant , Long need);
+
+    @Query(value = "select  nname,count   from food_need where restaurant = ?2 and food= ?1",nativeQuery = true)
+    List<Object[]> getNeedS(Long id , Long restaurant);
+
 }

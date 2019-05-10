@@ -1,8 +1,5 @@
 package com.qust.filter;
 
-import com.auth0.jwt.JWT;
-import com.auth0.jwt.JWTVerifier;
-import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.Claim;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;

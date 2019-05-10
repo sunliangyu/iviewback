@@ -88,4 +88,15 @@ public class OrderControler {
     public Map<String,Object> orderPage (@RequestBody Map<String,Object> map){
         return orderService.orderPage(map);
     }
+
+
+    @GetMapping("/inquiryOrder")
+    public Map<String,Object> inquiryOrder (@RequestParam Map<String,Object> map) {
+        return orderService.inquiryOrder(map);
+    }
+
+    @PostMapping("/pay")
+    public void pay (@RequestBody Map<String,Object> map ) {
+         orderService.pay(map);
+    }
 }

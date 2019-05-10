@@ -2,8 +2,10 @@ package com.qust.service;
 
 
 import com.qust.dao.FoodOrderDao;
+import com.qust.dao.InputFlowDao;
 import com.qust.dao.OrderDetailDao;
 import com.qust.entity.FoodOrder;
+import com.qust.entity.InputFlow;
 import com.qust.entity.OrderDetail;
 import com.qust.feignclient.KitchenClient;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +24,8 @@ public class OrderService {
     OrderDetailDao orderDetailDao;
     @Autowired
     KitchenClient kitchenClient;
+    @Autowired
+    InputFlowDao inputFlowDao;
 
     /**
      * 获取未读取的订单
@@ -59,6 +63,8 @@ public class OrderService {
         String end = df.format(calendar.getTime());
         re = foodOrderDao.findToday(restaurant, 'b', start, end);
         access = createRes(re);
+        re = foodOrderDao.findToday(restaurant, 'd', start, end);
+        access.addAll(createRes(re));
         result.put("receive", access);
         re = foodOrderDao.findToday(restaurant, 'c', start ,end);
         refuse = createRes(re);
@@ -127,6 +133,7 @@ public class OrderService {
         StringBuilder message = new StringBuilder();
         for (Object[] food : detail) {
             message.append(food[0].toString()).append("  共计").append(food[1].toString()).append("份");
+            message.append(" 价格").append(food[3]).append("元");
             if (food[2] != null) {
                 message.append("  备注").append(food[2].toString());
             }
@@ -172,6 +179,7 @@ public class OrderService {
             map.put("id", food.getOrderDetailPk().getFood());
             map.put("remark", food.getRemark());
             map.put("counts", food.getcounts());
+            map.put("name",food.getFoodName());
             foods.add(map);
         }
         result.put("foods", foods);
@@ -204,10 +212,19 @@ public class OrderService {
         String start = df.format(calendar.getTime());
         calendar.add(Calendar.DATE, 1);
         String stop = df.format(calendar.getTime());
-        int receive = foodOrderDao.getOrderCountByAccessTime(restaurant, 'b', start, stop);
-        int refuse = foodOrderDao.getOrderCountByAccessTime(restaurant, 'c', start, stop);
-        int nodo = foodOrderDao.getOrderCountByCreateTime(restaurant, 'a', start, stop);
-        int count = foodOrderDao.getPriceCount(restaurant, start, stop);
+        int receive ;
+        int refuse ;
+        int nodo ;
+        int did ;
+        receive = foodOrderDao.getOrderCountByAccessTime(restaurant, 'b', start, stop);
+        refuse = foodOrderDao.getOrderCountByAccessTime(restaurant, 'c', start, stop);
+        nodo = foodOrderDao.getOrderCountByCreateTime(restaurant, 'a', start, stop);
+        did = foodOrderDao.getOrderCountByCreateTime(restaurant, 'd', start, stop);
+        int count = 0;
+        Object object = inputFlowDao.getTodayCount(restaurant,start,stop);
+        if(object != null) {
+            count = (Integer)object;
+        }
         int all = foodOrderDao.getAllByDate(restaurant, start, stop);
         Map<String, Object> result = new HashMap<>();
         result.put("all", all);
@@ -215,6 +232,7 @@ public class OrderService {
         result.put("receive", receive);
         result.put("refuse", refuse);
         result.put("count", count);
+        result.put("did", did);
         return result;
     }
 
@@ -298,8 +316,12 @@ public class OrderService {
         int count;
         if(page == null) {
             if(condation.contains("d")){
-                int price = foodOrderDao.getinput(restaurant,start,stop,quality);
-                result.put("input",price);
+                Object price = foodOrderDao.getinput(restaurant,start,stop,quality);
+                if (price != null) {
+                    result.put("input",Integer.valueOf(String.valueOf(price)));
+                } else {
+                    result.put("input",0);
+                }
             } else {
                 result.put("input",0);
             }
@@ -322,8 +344,12 @@ public class OrderService {
         int count;
         if(page == null) {
             if(condation.contains("d")){
-                int price = foodOrderDao.getinput(restaurant,quality);
-                result.put("input",price);
+                Object price = foodOrderDao.getinput(restaurant,quality);
+                if(price != null) {
+                    result.put("input",Integer.valueOf(String.valueOf(price)));
+                } else {
+                    result.put("input",0);
+                }
             } else {
                 result.put("input",0);
             }
@@ -354,5 +380,123 @@ public class OrderService {
         }
         return result;
     }
+
+
+    public  Map<String,Object> inquiryOrder (Map<String,Object> map){
+        String type = String.valueOf(map.get("type"));
+        Long restaurant = Long.valueOf(String.valueOf(map.get("restaurant")));
+        Long id = Long.valueOf(String.valueOf(map.get("id")));
+        switch (type) {
+            case "A":
+                return this.orderByid(restaurant,id);
+            case "B":
+                return this.orderByCl(restaurant,id);
+            case "C":
+                return this.orderByLo(restaurant,id);
+            default:
+                return null;
+        }
+    }
+
+    private  Map<String,Object> orderByid (Long restaurant , Long id) {
+        FoodOrder foodOrder = foodOrderDao.getSimpleOrder(restaurant,id);
+        if (foodOrder == null ) {
+            Map<String,Object> map = new HashMap<>();
+            map.put("status","订单不存在");
+            return map;
+        } else {
+            return this.orderByid(foodOrder);
+        }
+    }
+    // 获取客户今天最近的一个订单
+    private Map<String,Object> orderByCl (Long restaurant , Long client) {
+        Date date = new Date();
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");//设置日期格式
+        Calendar calendar = new GregorianCalendar();
+        calendar.setTime(date);
+        String start = df.format(calendar.getTime());
+        calendar.add(Calendar.DATE, 1);
+        String stop = df.format(calendar.getTime());
+        FoodOrder foodOrder = foodOrderDao.orderByCl(restaurant,client,start,stop);
+        if(foodOrder == null ){
+            Map<String,Object> map = new HashMap<>();
+            map.put("status","当前客户今天没有订单");
+            return map;
+        }else {
+            return this.orderByid(foodOrder);
+        }
+    }
+
+    // 获取客户今天最近的一个订单
+    private Map<String,Object> orderByLo (Long restaurant,Long location) {
+        Date date = new Date();
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");//设置日期格式
+        Calendar calendar = new GregorianCalendar();
+        calendar.setTime(date);
+        String start = df.format(calendar.getTime());
+        calendar.add(Calendar.DATE, 1);
+        String stop = df.format(calendar.getTime());
+        FoodOrder foodOrder = foodOrderDao.orderByLo(restaurant,String.valueOf(location),start,stop);
+        if(foodOrder == null ){
+            Map<String,Object> map = new HashMap<>();
+            map.put("status","当前桌号今天没有订单");
+            return map;
+        }else {
+            return this.orderByid(foodOrder);
+        }
+    }
+    private Map<String,Object> orderByid ( FoodOrder foodOrder ) {
+        Map<String,Object> map = new HashMap<>();
+        map.put("price",foodOrder.getPrice());
+        map.put("location",foodOrder.getLocation());
+        map.put("client",foodOrder.getClient());
+        map.put("id",foodOrder.getIndent());
+        String time = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(foodOrder.getCreateTime());
+        map.put("time",time);
+        if(foodOrder.isPayFlag()) {
+            if(foodOrder.isPayMethod()) {
+                map.put("paym","b");
+            } else {
+                map.put("paym","c");
+            }
+        } else {
+            map.put("paym","a");
+        }
+        List<Object[]> detail = orderDetailDao.getOrderById(foodOrder.getRestaurant(), foodOrder.getIndent());
+        List foods = covertMap(detail);
+        map.put("food",foods);
+        return map;
+    }
+
+    private List<Map<String,Object>>  covertMap (List<Object[]> list) {
+        List<Map<String,Object>> result = new ArrayList<>();
+        for(Object[] objects: list) {
+            Map<String,Object> map = new HashMap<>();
+            map.put("name",objects[0]);
+            map.put("count",objects[1]);
+            map.put("price",objects[3]);
+            map.put("de",objects[2]);
+            result.add(map);
+        }
+        return result;
+    }
+
+
+    // 支付
+    public void pay (Map<String,Object> map) {
+        Long restaurant = Long.valueOf(String.valueOf(map.get("restaurant")));
+        Long id = Long.valueOf(String.valueOf(map.get("id")));
+        boolean method =Boolean.valueOf(String.valueOf(map.get("pay")));
+        int  price =  Integer.valueOf(String.valueOf(map.get("price")));
+        foodOrderDao.pay(restaurant,id,method);
+        InputFlow inputFlow = new InputFlow();
+        inputFlow.setCreateTime(new Timestamp(System.currentTimeMillis()));
+        inputFlow.setFlag(method);
+        inputFlow.setIndent(id);
+        inputFlow.setRestaurant(restaurant);
+        inputFlow.setInput(price);
+        inputFlowDao.save(inputFlow);
+    }
 }
+
 

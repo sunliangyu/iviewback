@@ -23,10 +23,22 @@ public interface FoodOrderDao extends JpaRepository<FoodOrder, Long> {
     @Query(value = "SELECT * from food_order where restaurant = ?1 and indent = ?2", nativeQuery = true)
     FoodOrder getSimpleOrder ( Long restaurant , Long order);
 
+    @Query(value = "SELECT * from food_order where restaurant = ?1 and  client = ?2 and create_time >= ?3 and create_time <= ?4 order BY create_time desc limit 0, 1", nativeQuery = true)
+    FoodOrder orderByCl (Long restaurant , Long client ,String start, String stop);
+
+    @Query(value = "SELECT * from food_order where restaurant = ?1 and  flag = false  and location = ?2 and create_time >= ?3 and create_time <= ?4 order BY create_time desc limit 0, 1", nativeQuery = true)
+    FoodOrder orderByLo(Long restaurant,String location , String start, String stop);
+
     @Transactional
     @Modifying
     @Query(value = "update  food_order set  flow = ?3 , access_time = ?4 , reason = ?5 where restaurant = ?1 and indent = ?2", nativeQuery = true)
     void updateFlow (Long restaurant , Long order , char flow , Timestamp date, String reason);
+
+
+    @Transactional
+    @Modifying
+    @Query(value = "update  food_order set pay_flag = 1 ,pay_method = ?3 where restaurant = ?1 and indent = ?2", nativeQuery = true)
+    void pay (Long restaurant , Long order , boolean pay);
 
     @Query(value = "SELECT  flag from food_order where restaurant = ?1 and indent = ?2", nativeQuery = true)
     Boolean getFlag (Long restaurant , Long order);
@@ -59,10 +71,12 @@ public interface FoodOrderDao extends JpaRepository<FoodOrder, Long> {
     List<Object[]> findPage(Long restaurant, List condition , List quality ,int  a );
 
     @Query(value = "SELECT sum(price) from food_order where restaurant = ?1   and flow = 'd' and  create_time >= ?2  and create_time <= ?3  and flag in ?4  ", nativeQuery = true)
-    int getinput (Long restaurant, String start, String stop , List quality );
+    Object getinput (Long restaurant, String start, String stop , List quality );
 
-    @Query(value = "SELECT sum(price) from food_order where restaurant = ?1   and flow = 'd'  and flag in ?2 ", nativeQuery = true)
-    int getinput (Long restaurant, List quality );
+    @Query(value = "SELECT sum(price)  from food_order where restaurant = ?1   and flow = 'd'  and flag in ?2 ", nativeQuery = true)
+    Object getinput (Long restaurant, List quality );
+
+
 
 
 

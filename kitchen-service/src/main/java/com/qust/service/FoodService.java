@@ -1,5 +1,6 @@
 package com.qust.service;
 
+import com.qust.dao.CodeOrderDao;
 import com.qust.dao.FoodClassDao;
 import com.qust.dao.FoodMenuDao;
 import com.qust.dao.FoodNeedDao;
@@ -8,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 @Service
@@ -18,6 +20,9 @@ public class FoodService {
     FoodNeedDao foodNeedDao;
     @Autowired
     FoodMenuDao foodMenuDao;
+
+    @Autowired
+    CodeOrderDao codeOrderDao;
     /**
     *获取该餐厅的所有菜单类型
     *@Param [restaurant]
@@ -220,4 +225,124 @@ public class FoodService {
             }
         }
     }
-}
+
+    /**
+    *获取所有菜单
+    *@Param [restaurant]
+    *@Return java.util.List<java.util.Map<java.lang.String,java.lang.Object>>
+    *@Author 孙良玉
+    */
+    public List<Map<String,Object>> getfoods (Long restaurant) {
+        List<Object[]> list = foodMenuDao.getFoos(restaurant);
+        List<Map<String,Object>> result = new ArrayList<>();
+        for (Object[] objects : list) {
+            Map<String,Object> map = new HashMap<>();
+            map.put("id",objects[0]);
+            map.put("label",objects[1]);
+            result.add(map);
+        }
+        return result;
+    }
+
+
+    public Map<String,Object> getcodepage (Map<String,Object> map) {
+        Long restaurant = Long.valueOf(String.valueOf(map.get("restaurant")));
+        Object page = map.get("page");
+        Object id = map.get("id");
+        String state = String.valueOf(map.get("state"));
+        if (id == null) {
+            return this.getPages(restaurant,page,state);
+        }else {
+            return this.getPages(restaurant,Long.valueOf(String.valueOf(id)),page,state);
+        }
+
+    }
+
+
+    public Map<String,Object> getPages(Long restaurant ,Long id, Object page,String state) {
+        Map<String,Object> result = new HashMap<>();
+        List<Object[]> foods  ;
+        if(page == null) {
+            int count =  codeOrderDao.getCountR(restaurant,id,state);
+            result.put("count",count);
+            if (count == 0) {
+                result.put("sum",0);
+                return result;
+            }else {
+                count = codeOrderDao.getSumR(restaurant,id,state);
+                result.put("sum",count);
+                foods = codeOrderDao.getPage(restaurant,id,0,state);
+            }
+        } else {
+            foods = codeOrderDao.getPage(restaurant,id,Integer.valueOf(String.valueOf(page))*10,state);
+        }
+        result.put("code",this.createFood(foods));
+        return result;
+    }
+    public Map<String,Object> getPages(Long restaurant , Object page,String state) {
+        Map<String,Object> result = new HashMap<>();
+        List<Object[]> foods  ;
+        if(page == null) {
+            int count =  codeOrderDao.getCountR(restaurant,state);
+            result.put("count",count);
+            if (count == 0) {
+                result.put("sum",0);
+                return result;
+            }else {
+                count = codeOrderDao.getSumR(restaurant,state);
+                result.put("sum",count);
+                foods = codeOrderDao.getPage(restaurant,0,state);
+            }
+        } else {
+            foods = codeOrderDao.getPage(restaurant,Integer.valueOf(String.valueOf(page))*10,state);
+        }
+        result.put("code",this.createFood(foods));
+        return result;
+    }
+
+    private List<Map<String,Object>>  createFood (List<Object[]> list) {
+        List<Map<String,Object>> food = new LinkedList<>();
+        for(Object[] objects : list) {
+            Map<String,Object> map = new HashMap<>();
+            map.put("food",objects[0]);
+            map.put("count",objects[1]);
+            String time = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format((Timestamp)objects[2]);
+            map.put("time",time);
+            boolean flag = (Boolean)objects[3];
+            if (flag) {
+                map.put("flag","Y");
+            } else {
+                map.put("flag","N");
+            }
+            map.put("remark",objects[4]);
+            map.put("name",objects[5]);
+            map.put("id",objects[6]);
+            food.add(map);
+        }
+        return food;
+    }
+
+
+    public List<Map<String,Object>> getNeed (Map<String,Object> arg){
+        Long restaurant = Long.valueOf(String.valueOf(arg.get("restaurant")));
+        Long id = Long.valueOf(String.valueOf(arg.get("id")));
+        List<Object[]> list  = foodNeedDao.getNeedS(id,restaurant);
+        List<Map<String,Object>> result = new LinkedList<>();
+        for(Object[] objects : list) {
+            Map<String,Object> map = new HashMap<>();
+            map.put("name",objects[0]);
+            map.put("count",objects[1]);
+            result.add(map);
+        }
+        return result;
+    }
+
+    public void updateorder (Map<String,Object> map) {
+        Long restaurant  =  Long.valueOf(String.valueOf(map.get("restaurant")));
+        Long id = Long.valueOf(String.valueOf(map.get("id")));
+        Long order = Long.valueOf(String.valueOf(map.get("order")));
+        String state = String.valueOf(map.get("state"));
+        Timestamp time = new Timestamp(System.currentTimeMillis());
+        codeOrderDao.updatestate(id,restaurant,order,state,time);
+    }
+ }

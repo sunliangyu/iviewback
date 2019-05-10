@@ -9,11 +9,10 @@ import java.util.List;
 
 public interface OrderDetailDao extends JpaRepository<OrderDetail, OrderDetailPk> {
 
-    @Query(value = "SELECT  food_name ,counts , remark  from order_detail where restaurant = ?1 and  indent = ?2 ", nativeQuery = true)
+    @Query(value = "SELECT  food_name ,counts , remark ,price from order_detail where restaurant = ?1 and  indent = ?2 ", nativeQuery = true)
     List<Object[]> getOrderById (long restaurant , Long order) ;
 
     @Query(value = "SELECT  *  from order_detail where restaurant = ?1 and  indent = ?2 ", nativeQuery = true)
     List<OrderDetail> findByOrderDetailPkIndent (long restaurant  , Long indent);
-
 
 }

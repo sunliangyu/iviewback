@@ -21,6 +21,24 @@ public class OrderDetail implements Serializable {
     private String foodName;
     @Column
     private Long restaurant;
+    @Column
+    private int price;
+
+    public int getCounts() {
+        return counts;
+    }
+
+    public void setCounts(int counts) {
+        this.counts = counts;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
 
     public Long getRestaurant() {
         return restaurant;
