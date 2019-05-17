@@ -36,4 +36,10 @@ public interface RawMaterialDao extends JpaRepository<RawMaterial,Long> {
     @Query(value = "update raw_material  set count = count + ?3 , update_time = ?4  where restaurant = ?2 and id = ?1",nativeQuery = true)
     void add(Long id , Long restaurant, int count , Timestamp time );
 
+
+    @Transactional
+    @Modifying
+    @Query(value = "update raw_material  set count = count + ?3   where restaurant = ?2 and id = ?1",nativeQuery = true)
+    void delete(Long id , Long restaurant, int count );
+
 }

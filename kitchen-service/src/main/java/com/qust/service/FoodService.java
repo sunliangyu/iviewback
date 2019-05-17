@@ -26,7 +26,10 @@ public class FoodService {
     ShoppingDao shoppingDao;
     @Autowired
     ClientClient clientClient;
-
+    @Autowired
+    RawMarerialOrderDao rawMarerialOrderDao;
+    @Autowired
+    RawMaterialDao rawMaterialDao;
     /**
     *获取该餐厅的所有菜单类型
     *@Param [restaurant]
@@ -354,9 +357,37 @@ public class FoodService {
             arg.put("id",order);
             arg.put("food",id);
             clientClient.finish(arg);
+        } else if (state == 'b') {
+            List<Object[]> list = foodNeedDao.getCost(restaurant,id);
+            if(list != null ){
+                this.costNeed(restaurant,order,list);
+            }
         }
     }
 
+    private void costNeed (Long restaurant,Long order,List<Object[]> list ) {
+        RawMarerialOrder rawMarerialOrder = new RawMarerialOrder();
+        rawMarerialOrder.setCreateTime(new Timestamp(System.currentTimeMillis()));
+        rawMarerialOrder.setRemark("订单"+order);
+        rawMarerialOrder.setRestaurant(restaurant);
+        rawMarerialOrder.setOutput(0);
+        StringBuilder builder = new StringBuilder();
+        builder.append(restaurant);
+        for(Object[] objects: list) {
+            rawMarerialOrder.setName(String.valueOf(objects[2]));
+            int count = (Integer)objects[1];
+            count = - count;
+            rawMarerialOrder.setCount(count);
+            Long material = Long.valueOf(String.valueOf(objects[0]));
+            builder.append(System.currentTimeMillis());
+            Long id = Long.valueOf(builder.toString());
+            rawMarerialOrder.setId(id);
+            builder.delete(String.valueOf(restaurant).length(),30);
+            rawMarerialOrder.setMaterial(material);
+            rawMarerialOrderDao.save(rawMarerialOrder);
+            rawMaterialDao.delete(material,restaurant,count);
+        }
+    }
 
     public List getImage ( Long restaurant, Long id ) {
         List<Object> list = foodImageDao.findUrl(restaurant,id);

@@ -29,4 +29,7 @@ public interface FoodNeedDao extends JpaRepository<FoodNeed, FoodNeedPk> {
     @Query(value = "select  nname,count   from food_need where restaurant = ?2 and food= ?1",nativeQuery = true)
     List<Object[]> getNeedS(Long id , Long restaurant);
 
+    @Query(value = "select material, count,nname  from food_need where restaurant = ?1 and food= ?2",nativeQuery = true)
+    List<Object[]> getCost(Long restaurant , Long id);
+
 }
