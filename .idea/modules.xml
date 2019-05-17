@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/gateway-service/gateway-service.iml" filepath="$PROJECT_DIR$/gateway-service/gateway-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/kitchen-service/kitchen-service.iml" filepath="$PROJECT_DIR$/kitchen-service/kitchen-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/monitor-service/monitor-service.iml" filepath="$PROJECT_DIR$/monitor-service/monitor-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shardingtest/shardingtest.iml" filepath="$PROJECT_DIR$/shardingtest/shardingtest.iml" />
       <module fileurl="file://$PROJECT_DIR$/system-service/system-service.iml" filepath="$PROJECT_DIR$/system-service/system-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/zipkin-service/zipkin-service.iml" filepath="$PROJECT_DIR$/zipkin-service/zipkin-service.iml" />
     </modules>

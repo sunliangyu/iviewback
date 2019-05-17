@@ -33,7 +33,9 @@ public interface CodeOrderDao extends JpaRepository<CodeOrder, CodeOrderPk> {
     @Transactional
     @Modifying
     @Query(value = "update code_order set state=?4 , update_time = ?5 where restaurant = ?2 and indent = ?3 and food=?1",nativeQuery = true)
-    void updatestate(Long id , Long restaurant , Long order , String state, Timestamp time);
+    void updatestate(Long id , Long restaurant , Long order , char state, Timestamp time);
 
 
+    @Query(value = "SELECT count,state,name  from code_order  where restaurant = ?1  and indent =?2 ", nativeQuery = true)
+    List<Object[]> getProgress (Long restaurant,Long id);
 }

@@ -14,6 +14,22 @@ spring:
     url: jdbc:mysql://localhost:3306/kitchen?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
     username: root
     password: sly123321
+    show-sql: true
+  datasource0:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/kitchen?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    username: root
+    password: sly123321
+    show-sql: true
+    databaseName: database1
+  datasource1:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/kitchen?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    username: root
+    password: sly123321
+    show-sql: true
+    databaseName: database1
+
   jpa:
     hibernate:
       ddl-auto: update
@@ -25,3 +41,4 @@ ribbon:
   ConnectTimeout: 60000
 
 foo: foo version 1
+

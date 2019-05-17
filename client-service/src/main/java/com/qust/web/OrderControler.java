@@ -73,6 +73,7 @@ public class OrderControler {
         return orderService.getCountOrder(restaurant);
     }
 
+    @ApiOperation(value = "获取bar页的数据", notes = "获取bar页的数据")
     @GetMapping("/getBar")
     public List<Integer> getBar(@RequestParam Long restaurant){
         return orderService.getOldCount(restaurant,new Date(System.currentTimeMillis()));
@@ -89,14 +90,94 @@ public class OrderControler {
         return orderService.orderPage(map);
     }
 
-
+    /**
+    *订单详情查询
+    *@Param [map]
+    *@Return java.util.Map<java.lang.String,java.lang.Object>
+    *@Author 孙良玉
+    */
     @GetMapping("/inquiryOrder")
     public Map<String,Object> inquiryOrder (@RequestParam Map<String,Object> map) {
         return orderService.inquiryOrder(map);
     }
 
+    /**
+    *支付
+    *@Param [map]
+    *@Return void
+    *@Author 孙良玉
+    */
     @PostMapping("/pay")
     public void pay (@RequestBody Map<String,Object> map ) {
          orderService.pay(map);
     }
+
+    /**
+    * 用户查询自己的订单
+    *@Param [map]
+    *@Return java.util.Map<java.lang.String,java.lang.Object>
+    *@Author 孙良玉
+    */
+    @PostMapping("/cifQuiryOrder")
+    public Map<String,Object> cifQuiryOrder  (@RequestBody Map<String,Object> map ) {
+        return orderService.cifQuiryOrder(map);
+    }
+
+    
+    /**
+    *客户home页的查询今天已拒单以及今天已完成的简略信息
+    *@Param [map]
+    *@Return java.util.List<java.util.Map>
+    *@Author 孙良玉
+    */
+    @GetMapping("/todayOrder")
+    public List<Map> todatyOrder (@RequestParam Map<String,Object> map ) {
+        return orderService.todatyOrder(map);
+    }
+
+    /**
+    *数量
+    *@Param [map]
+    *@Return java.util.Map<java.lang.String,java.lang.Object>
+    *@Author 孙良玉
+    */
+    @GetMapping("/orderCount")
+    public Map<String,Object>  orderCount (@RequestParam Map<String,Object> map){
+        return orderService.orderCount(map);
+    }
+
+    /**
+    *取消订单 逻辑没写清晰
+    *@Param [map]
+    *@Return void
+    *@Author 孙良玉
+    */
+    @PutMapping("/cancelOrder")
+    public void cancelOrder (@RequestParam Map<String,Object> map) {
+        orderService.cancelOrder(map);
+    }
+
+    /**
+    *下单
+    *@Param [map]
+    *@Return java.util.Map
+    *@Author 孙良玉
+    */
+    @PostMapping("/purchase")
+    public Map purchase (@RequestBody Map<String,Object> map ){
+        return orderService.purchase(map);
+    }
+
+
+    /**
+    *完成某些菜
+    *@Param [map]
+    *@Return void
+    *@Author 孙良玉
+    */
+    @PostMapping("/finish")
+    public void finish (@RequestBody Map<String,Object> map ){
+        orderService.finish(map);
+    }
+
 }

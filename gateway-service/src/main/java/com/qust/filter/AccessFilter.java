@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;;import java.util.Map;
 
 public class AccessFilter  extends ZuulFilter {
 
-    public static String[]  excludeFilt = {"/system/system/login","/system/system/registry"};
-    public static String[]  noRestaurant = {"/system/system/getUserInfo"};
+    public static String[]  excludeFilt = {"/system/system/getRestaurants","/system/system/login","/system/system/registry","/client/client/login","/client/client/registry"};
+    public static String[]  noRestaurant = {"/system/system/getUserInfo","/client/client/getUserInfo","/file/file/image"};
     @Override
     public String filterType() {
         return "pre";

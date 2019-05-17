@@ -10,7 +10,6 @@ import java.sql.Timestamp;
 public class FoodOrder implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long indent;
 
     @Column
@@ -51,6 +50,16 @@ public class FoodOrder implements Serializable {
     private Timestamp accessTime;
     @Column
     private String reason;
+    @Column
+    private int finish;
+
+    public int getFinish() {
+        return finish;
+    }
+
+    public void setFinish(int finish) {
+        this.finish = finish;
+    }
 
     public String getReason() {
         return reason;

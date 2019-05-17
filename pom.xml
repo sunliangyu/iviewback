@@ -19,6 +19,7 @@
         <module>kitchen-service</module>
         <module>client-service</module>
         <module>file-service</module>
+        <module>shardingtest</module>
     </modules>
 
     <parent>

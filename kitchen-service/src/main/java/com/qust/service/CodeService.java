@@ -1,6 +1,7 @@
 package com.qust.service;
 
 import com.qust.dao.CodeOrderDao;
+import com.qust.dao.FoodMenuDao;
 import com.qust.entity.CodeOrder;
 import com.qust.entity.CodeOrderPk;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,8 @@ import java.util.Map;
 public class CodeService {
     @Autowired
     CodeOrderDao codeOrderDao;
-
+    @Autowired
+    FoodMenuDao foodMenuDao;
     public void addCodeOrder (Map<String,Object> map){
         Long order  = Long.valueOf( map.get("order").toString() );
         Boolean flag = (Boolean)map.get("flag");
@@ -43,10 +45,7 @@ public class CodeService {
             String name = String.valueOf(food.get("name"));
             codeOrder.setName(name);
             codeOrderDao.save(codeOrder);
+            foodMenuDao.updateFoodOut(restaurant,foodid);
         }
     }
-
-
-
-
 }

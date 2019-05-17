@@ -72,5 +72,4 @@ public class KitchenController {
         return materialService.getMateFlow(map);
     }
 
-
 }

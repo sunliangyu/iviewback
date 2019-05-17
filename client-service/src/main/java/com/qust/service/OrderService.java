@@ -7,10 +7,12 @@ import com.qust.dao.OrderDetailDao;
 import com.qust.entity.FoodOrder;
 import com.qust.entity.InputFlow;
 import com.qust.entity.OrderDetail;
+import com.qust.entity.OrderDetailPk;
 import com.qust.feignclient.KitchenClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -178,7 +180,7 @@ public class OrderService {
             Map<String, Object> map = new HashMap<>();
             map.put("id", food.getOrderDetailPk().getFood());
             map.put("remark", food.getRemark());
-            map.put("counts", food.getcounts());
+            map.put("counts", food.getCounts());
             map.put("name",food.getFoodName());
             foods.add(map);
         }
@@ -220,10 +222,10 @@ public class OrderService {
         refuse = foodOrderDao.getOrderCountByAccessTime(restaurant, 'c', start, stop);
         nodo = foodOrderDao.getOrderCountByCreateTime(restaurant, 'a', start, stop);
         did = foodOrderDao.getOrderCountByCreateTime(restaurant, 'd', start, stop);
-        int count = 0;
+        BigDecimal count = new BigDecimal(0);
         Object object = inputFlowDao.getTodayCount(restaurant,start,stop);
         if(object != null) {
-            count = (Integer)object;
+            count = ((BigDecimal)object);
         }
         int all = foodOrderDao.getAllByDate(restaurant, start, stop);
         Map<String, Object> result = new HashMap<>();
@@ -372,7 +374,7 @@ public class OrderService {
         List<Map<String,Object>> result = new LinkedList<>();
         for( Object[] objects : list) {
             Map<String,Object> map = new HashMap<>();
-            map.put("id",Integer.valueOf(String.valueOf(objects[0])));
+            map.put("id",Long.valueOf(String.valueOf(objects[0])));
             map.put("time", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format((Timestamp)objects[1]));
             map.put("flag",objects[2]);
             map.put("flow",objects[3]);
@@ -497,6 +499,241 @@ public class OrderService {
         inputFlow.setInput(price);
         inputFlowDao.save(inputFlow);
     }
+
+
+    //  客户订单查询 和 上面的餐厅订单查询有很大代码冗余 后期注意修改
+    public Map<String,Object> cifQuiryOrder (Map<String,Object> map ) {
+        List condition = (ArrayList)map.get("condition");
+        List quality = (ArrayList)map.get("quality");
+        Long userid = Long.valueOf(String.valueOf(map.get("user")));
+        if (quality.size() == 2) {
+            quality.clear();
+            quality.add(true);
+            quality.add(false);
+        } else {
+            if(String.valueOf(quality.get(0)).equals("Y")){
+                quality.clear();
+                quality.add(true);
+            }else{
+                quality.clear();
+                quality.add(false);
+            }
+        }
+        Long restaurant = Long.valueOf(String.valueOf(map.get("restaurant")));
+        Object st = map.get("start");
+        Object page = map.get("page");
+        if(st != null ) {
+            List list  = (List)st;
+            String start =  String.valueOf(list.get(0));
+            String stop =  String.valueOf(list.get(1));
+            return this.getorderpage(restaurant,start,stop,page,condition,quality,userid);
+        }
+        return this.getorderpage(restaurant,condition,quality,page,userid);
+    }
+
+
+
+    public Map<String,Object>  getorderpage (Long restaurant , String start , String stop ,Object page  ,List condation , List quality , Long userid) {
+        Map<String,Object> result = new HashMap<>();
+        int count;
+        if(page == null) {
+            if(condation.contains("d")){
+                Object price = foodOrderDao.getinput(restaurant,start,stop,quality,userid);
+                if (price != null) {
+                    result.put("out",Integer.valueOf(String.valueOf(price)));
+                } else {
+                    result.put("out",0);
+                }
+            } else {
+                result.put("out",0);
+            }
+            count = foodOrderDao.findCount(restaurant,start,stop,condation,quality,userid);
+            result.put("all",count);
+            if (count == 0){
+                return  result;
+            }
+            count = 0;
+        } else {
+            count = (Integer)page;
+        }
+        List<Object[]> list = foodOrderDao.findPage(restaurant,start,stop,condation,quality,count  * 10 ,userid);
+        result.put("page",this.createorder(list));
+        return result;
+    }
+
+    public Map<String,Object>  getorderpage (Long restaurant  ,List condation , List quality , Object page ,Long userid) {
+        Map<String,Object> result = new HashMap<>();
+        int count;
+        if(page == null) {
+            if(condation.contains("d")){
+                Object price = foodOrderDao.getinput(restaurant,quality,userid);
+                if(price != null) {
+                    result.put("out",Integer.valueOf(String.valueOf(price)));
+                } else {
+                    result.put("out",0);
+                }
+            } else {
+                result.put("out",0);
+            }
+            count = foodOrderDao.findCount(restaurant,condation,quality,userid);
+            result.put("all",count);
+            if (count == 0){
+                return  result;
+            }
+            count = 0;
+        } else {
+            count = (Integer)page;
+        }
+        List<Object[]> list = foodOrderDao.findPage(restaurant,condation,quality,count  * 10 ,userid);
+        result.put("page",this.createorder(list));
+        return result;
+    }
+
+
+
+    public List<Map> todatyOrder (Map<String,Object> map ) {
+        Long restaurant = Long.valueOf(String.valueOf(map.get("restaurant")));
+        Long cif = Long.valueOf(String.valueOf(map.get("cif")));
+        char type = String.valueOf(map.get("type")).charAt(0);
+        List<Object[]> list ;
+        if (type == 'a') {
+            list = foodOrderDao.getOrderByCif(restaurant,cif,'a');
+        } else if (type == 'b') {
+            list = foodOrderDao.getOrderByCif(restaurant,cif,'b');
+        } else if (type == 'c') {
+            String today = this.getToday();
+            list = foodOrderDao.getOrderByCif(restaurant,cif,'c',today);
+        } else {
+            String today = this.getToday();
+            list = foodOrderDao.getOrderByCif(restaurant,cif,'d',today);
+        }
+        return this.createR(list);
+    }
+
+
+    private String getToday () {
+        Date date = new Date();
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");//设置日期格式
+        Calendar calendar = new GregorianCalendar();
+        calendar.setTime(date);
+        String start = df.format(calendar.getTime());
+        return start;
+    }
+
+    private List<Map>   createR (List<Object[]> list) {
+        List<Map> result = new LinkedList<>();
+        for (Object[] objects: list) {
+            Map<String, Object> map  =  new HashMap<>();
+            Long id = Long.valueOf(String.valueOf(objects[0]));
+            map.put("id",id);
+            map.put("time", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format((Timestamp)objects[1]));
+            result.add(map);
+        }
+        return result;
+    }
+
+
+    public Map<String,Object> orderCount (Map<String,Object> map ) {
+        Long restaurant  = Long.valueOf(String.valueOf(map.get("restaurant")));
+        Long cif = Long.valueOf(String.valueOf(map.get("cif")));
+        Map<String,Object> result = new HashMap<>();
+        int arg = foodOrderDao.getOrderCount(restaurant,cif,'a');
+        result.put("a",arg);
+        arg  = foodOrderDao.getOrderCount(restaurant,cif,'b');
+        result.put("b",arg);
+        String today = this.getToday();
+        arg = foodOrderDao.getOrderCount(restaurant,cif,'c',today);
+        result.put("c",arg);
+        arg = foodOrderDao.getOrderCount(restaurant,cif,'d',today);
+        result.put("d",arg);
+        return result;
+    }
+
+
+    public void cancelOrder (Map<String,Object> map) {
+        Long restaurant =Long.valueOf(String.valueOf(map.get("restaurant")));
+        Long cif = Long.valueOf(String.valueOf(map.get("cif")));
+        Long id = Long.valueOf(String.valueOf(map.get("id")));
+        String reason = String.valueOf(map.get("reason"));
+        foodOrderDao.updateFlow(restaurant,id,'e',new Timestamp(System.currentTimeMillis()),reason,cif);
+    }
+
+
+    //  代码太粗糙 后期优化一下
+    public Map purchase (Map<String,Object> arg) {
+        FoodOrder order = new FoodOrder();
+        Long restaurant =Long.valueOf(String.valueOf(arg.get("restaurant")));
+        Long cif = Long.valueOf(String.valueOf(arg.get("cif")));
+        List foods = (ArrayList)arg.get("food");
+        int price = Integer.valueOf(String.valueOf(arg.get("price")));
+        order.setPrice(price);
+        price = Integer.valueOf(String.valueOf(arg.get("count")));
+        order.setCountFoods(price);
+        order.setFinish(price);
+        price = Integer.valueOf(String.valueOf(arg.get("people")));
+        order.setPeople(price);
+        char type = String.valueOf(arg.get("flag")).charAt(0);
+        if (type == 'A') {
+            order.setFlag(true);
+        } else {
+            order.setFlag(false);
+        }
+        Object object = arg.get("remark");
+        String remark = null;
+        if( object != null) {
+            remark = String.valueOf(object);
+        }
+        order.setRemark(remark);
+        StringBuilder builder = new StringBuilder();
+        builder.append(System.currentTimeMillis());
+        builder.append(cif);
+        Long id =  Long.valueOf(builder.toString());
+        order.setClient(cif);
+        order.setRestaurant(restaurant);
+        order.setLocation(String.valueOf(arg.get("address")));
+        order.setCreateTime(new Timestamp(System.currentTimeMillis()));
+        order.setFlow('a');
+        order.setIndent(id);
+        foodOrderDao.save(order);
+        OrderDetailPk pk = new OrderDetailPk();
+        pk.setIndent(id);
+        OrderDetail orderDetail = new OrderDetail();
+        orderDetail.setClient(cif);
+        orderDetail.setRemark(remark);
+        orderDetail.setRestaurant(restaurant);
+        orderDetail.setOrderDetailPk(pk);
+        for(Object f: foods) {
+            Map map = (HashMap)f;
+            Long food = Long.valueOf(String.valueOf(map.get("food")));
+            String name = String.valueOf(map.get("name"));
+            int num = Integer.valueOf(String.valueOf(map.get("num")));
+            orderDetail.setCounts(num);
+            num = Integer.valueOf(String.valueOf(map.get("price")));
+            orderDetail.setPrice(num);
+            pk.setFood(food);
+            orderDetail.setFoodName(name);
+            orderDetailDao.save(orderDetail);
+        }
+
+        Map<String,Object> result = new HashMap<>();
+        result.put("id",id);
+        result.put("state",true);
+        return result;
+    }
+
+    public void finish (Map map) {
+        Long restaurant =Long.valueOf(String.valueOf(map.get("restaurant")));
+        Long id = Long.valueOf(String.valueOf(map.get("id")));
+        int finish = foodOrderDao.getFinished(restaurant,id);
+        Long food = Long.valueOf(String.valueOf(map.get("food")));
+        int count = orderDetailDao.findCounts(restaurant,id,food);
+        if(count == finish) {
+            foodOrderDao.updateFinish(restaurant,id,'d');
+        } else {
+            foodOrderDao.updateFinish(restaurant,id,count);
+        }
+    }
 }
+
 
 

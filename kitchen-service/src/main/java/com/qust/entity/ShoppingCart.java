@@ -7,20 +7,20 @@ import java.io.Serializable;
 
 //购物车
 @Entity
-public class ShoppingCard implements Serializable {
+public class ShoppingCart implements Serializable {
 
     @EmbeddedId
-    private ShoppingCardPk shoppingCardPk;
+    private ShoppingCartPk shoppingCartPk;
 
     @Column
     private int count;
 
-    public ShoppingCardPk getShoppingCardPk() {
-        return shoppingCardPk;
+    public ShoppingCartPk getShoppingCardPk() {
+        return shoppingCartPk;
     }
 
-    public void setShoppingCardPk(ShoppingCardPk shoppingCardPk) {
-        this.shoppingCardPk = shoppingCardPk;
+    public void setShoppingCardPk(ShoppingCartPk shoppingCardPk) {
+        this.shoppingCartPk = shoppingCardPk;
     }
 
     public int getCount() {

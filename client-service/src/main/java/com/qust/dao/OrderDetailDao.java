@@ -15,4 +15,6 @@ public interface OrderDetailDao extends JpaRepository<OrderDetail, OrderDetailPk
     @Query(value = "SELECT  *  from order_detail where restaurant = ?1 and  indent = ?2 ", nativeQuery = true)
     List<OrderDetail> findByOrderDetailPkIndent (long restaurant  , Long indent);
 
+    @Query(value = "SELECT  counts from order_detail where restaurant = ?1 and  indent = ?2 and food =?3 ", nativeQuery = true)
+    int findCounts (Long restaurant, Long indent , Long food);
 }

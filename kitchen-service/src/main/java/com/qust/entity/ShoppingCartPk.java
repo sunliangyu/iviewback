@@ -5,7 +5,7 @@ import javax.persistence.Embeddable;
 import java.io.Serializable;
 
 @Embeddable
-public class ShoppingCardPk implements Serializable {
+public class ShoppingCartPk implements Serializable {
     @Column
     private Long restaurant;
 

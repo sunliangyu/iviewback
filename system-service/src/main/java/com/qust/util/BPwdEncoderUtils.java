@@ -12,7 +12,7 @@ public class BPwdEncoderUtils {
      * @param password
      * @return
      */
-    public static String  BCryptPassword(String password){
+    public static String                                                              BCryptPassword(String password){
         return encoder.encode(password);
     }
 

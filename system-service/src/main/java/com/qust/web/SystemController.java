@@ -3,6 +3,7 @@ package com.qust.web;
 import com.qust.entity.User;
 import com.qust.feignclient.ClientClient;
 import com.qust.service.InfoMessageService;
+import com.qust.service.RestaurantService;
 import com.qust.service.UserService;
 import com.qust.util.BPwdEncoderUtils;
 import io.swagger.annotations.ApiOperation;
@@ -10,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -25,11 +27,13 @@ public class SystemController {
     @Autowired
     InfoMessageService infoMessageService;
 
+    @Autowired
+    RestaurantService restaurantService;
 
     @ApiOperation(value = "注册", notes = "username和password为必选项")
     @PostMapping("/registry")
     public Map createUser(@RequestBody User user){
-        //参数判读省略,判读该用户在数据库是否已经存在省略
+        //参数判读省略
         String entryPassword= BPwdEncoderUtils.BCryptPassword(user.getPassword());
         user.setPassword(entryPassword);
         return userService.createUser(user);
@@ -86,5 +90,10 @@ public class SystemController {
         Long msg_id = Long.valueOf((map.get("msg_id")).toString());
         char state = ((String)map.get("state")).charAt(0);
         infoMessageService.alterMessage(restaurant,msg_id,state);
+    }
+
+    @GetMapping ("/getRestaurants")
+    public List getRestaurants(){
+        return restaurantService.getRestaurants();
     }
 }

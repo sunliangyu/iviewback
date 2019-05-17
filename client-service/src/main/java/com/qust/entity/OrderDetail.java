@@ -80,12 +80,4 @@ public class OrderDetail implements Serializable {
         this.remark = remark;
     }
 
-    public int getcounts() {
-        return counts;
-    }
-
-    public void setcounts(int counts) {
-        this.counts = counts;
-    }
-
 }

@@ -10,7 +10,6 @@ public class Client implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     @Column
     private String username;
     @Column
@@ -33,6 +32,28 @@ public class Client implements Serializable {
 
     @Column
     private String phone;
+
+    @Column
+    private String access;
+
+    @Column
+    private String avatar;
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
+    public String getAccess() {
+        return access;
+    }
+
+    public void setAccess(String access) {
+        this.access = access;
+    }
 
     public Long getId() {
         return id;

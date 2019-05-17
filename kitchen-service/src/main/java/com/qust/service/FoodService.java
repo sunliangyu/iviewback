@@ -1,10 +1,8 @@
 package com.qust.service;
 
-import com.qust.dao.CodeOrderDao;
-import com.qust.dao.FoodClassDao;
-import com.qust.dao.FoodMenuDao;
-import com.qust.dao.FoodNeedDao;
+import com.qust.dao.*;
 import com.qust.entity.*;
+import com.qust.feignclient.ClientClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,9 +18,15 @@ public class FoodService {
     FoodNeedDao foodNeedDao;
     @Autowired
     FoodMenuDao foodMenuDao;
-
     @Autowired
     CodeOrderDao codeOrderDao;
+    @Autowired
+    FoodImageDao foodImageDao;
+    @Autowired
+    ShoppingDao shoppingDao;
+    @Autowired
+    ClientClient clientClient;
+
     /**
     *获取该餐厅的所有菜单类型
     *@Param [restaurant]
@@ -227,7 +231,7 @@ public class FoodService {
     }
 
     /**
-    *获取所有菜单
+    *获取所有菜单的简单信息
     *@Param [restaurant]
     *@Return java.util.List<java.util.Map<java.lang.String,java.lang.Object>>
     *@Author 孙良玉
@@ -243,6 +247,8 @@ public class FoodService {
         }
         return result;
     }
+
+
 
 
     public Map<String,Object> getcodepage (Map<String,Object> map) {
@@ -323,9 +329,7 @@ public class FoodService {
     }
 
 
-    public List<Map<String,Object>> getNeed (Map<String,Object> arg){
-        Long restaurant = Long.valueOf(String.valueOf(arg.get("restaurant")));
-        Long id = Long.valueOf(String.valueOf(arg.get("id")));
+    public List<Map<String,Object>> getNeed (Long restaurant , Long id){
         List<Object[]> list  = foodNeedDao.getNeedS(id,restaurant);
         List<Map<String,Object>> result = new LinkedList<>();
         for(Object[] objects : list) {
@@ -341,8 +345,200 @@ public class FoodService {
         Long restaurant  =  Long.valueOf(String.valueOf(map.get("restaurant")));
         Long id = Long.valueOf(String.valueOf(map.get("id")));
         Long order = Long.valueOf(String.valueOf(map.get("order")));
-        String state = String.valueOf(map.get("state"));
+        char state = String.valueOf(map.get("state")).charAt(0);
         Timestamp time = new Timestamp(System.currentTimeMillis());
         codeOrderDao.updatestate(id,restaurant,order,state,time);
+        if(state == 'c') {
+            Map arg = new HashMap();
+            arg.put("restaurant",restaurant);
+            arg.put("id",order);
+            arg.put("food",id);
+            clientClient.finish(arg);
+        }
+    }
+
+
+    public List getImage ( Long restaurant, Long id ) {
+        List<Object> list = foodImageDao.findUrl(restaurant,id);
+        List<String> result = new LinkedList<>();
+        for (Object objects : list) {
+            result.add(String.valueOf(objects));
+        }
+        return result;
+    }
+
+    public void alertImage (Map<String,Object> map) {
+        Long restaurant = Long.valueOf(String.valueOf(map.get("restaurant")));
+        Long id  = Long.valueOf(String.valueOf(map.get("id")));
+        FoodImagePk pk = new FoodImagePk();
+        pk.setFood(id);
+        pk.setRestaurant(restaurant);
+        FoodImage foodImage = new FoodImage();
+        foodImage.setId(pk);
+        Object object = map.get("add");
+        if(object != null) {
+            List add = (ArrayList)object;
+            int len = add.size();
+            for (int i = 0; i<len ; i++ ) {
+                String url = String.valueOf(add.get(i));
+                pk.setUrl(url);
+                foodImageDao.save(foodImage);
+            }
+        }
+        object = map.get("deletes");
+        if(object != null) {
+            List delete = (ArrayList)object;
+            int len = delete.size();
+            for (int i = 0; i<len ; i++ ) {
+                pk.setUrl(String.valueOf(delete.get(i)));
+                foodImageDao.delete(foodImage);
+            }
+        }
+    }
+
+
+    /**
+    *获取某个订单的详细详细进展
+    *@Param [map]
+    *@Return java.util.Map<java.lang.String,java.lang.Object>
+    *@Author 孙良玉
+    */
+    public List getProgress (Map<String,Object> map) {
+        Long restaurant = Long.valueOf(String.valueOf(map.get("restaurant")));
+        Long id  = Long.valueOf(String.valueOf(map.get("id")));
+        List<Object[]> list = codeOrderDao.getProgress(restaurant,id);
+        List<Map<String,Object>> result = new LinkedList<>();
+        for(Object[] objects: list) {
+            Map<String,Object> arg = new HashMap<>();
+            arg.put("name",objects[2]);
+            arg.put("flow",objects[1]);
+            arg.put("count",objects[0]);
+            result.add(arg);
+        }
+        return result;
+    }
+
+
+    /**
+    *获取购物车物品信息
+    *@Param [arg]
+    *@Return java.util.List<java.util.Map>
+    *@Author 孙良玉
+    */
+    public List<Map> getCart (Map<String,Object> arg) {
+        Long restaurant = Long.valueOf(String.valueOf(arg.get("restaurant")));
+        Long cif = Long.valueOf(String.valueOf(arg.get("cif")));
+        List<Object[]> list = shoppingDao.getCart(restaurant,cif);
+        List<Map> result = new LinkedList<>();
+        for(Object[] objects: list) {
+            Map<String,Object> map = new HashMap<>();
+            map.put("food",objects[0]);
+            map.put("num",objects[1]);
+            map.put("name",objects[2]);
+            map.put("price",objects[3]);
+            result.add(map);
+        }
+        return result;
+    }
+
+    public void alertCart (Map<String, Object> arg) {
+        Long restaurant = Long.valueOf(String.valueOf(arg.get("restaurant")));
+        Long cif = Long.valueOf(String.valueOf(arg.get("cif")));
+        Long food = Long.valueOf(String.valueOf(arg.get("food")));
+        char type = ((String)arg.get("type")).charAt(0);
+        ShoppingCartPk pk = new ShoppingCartPk();
+        pk.setClient(cif);
+        pk.setRestaurant(restaurant);
+        pk.setFood(food);
+        ShoppingCart cart = new ShoppingCart();
+        cart.setShoppingCardPk(pk);
+        if(type == 'a') { // insert
+            int num = Integer.valueOf(String.valueOf(arg.get("num")));
+            cart.setCount(num);
+            shoppingDao.save(cart);
+        } else if (type == 'b' ){ //uupodate
+            int num = Integer.valueOf(String.valueOf(arg.get("num")));
+            shoppingDao.updateNum(restaurant,cif,food,num);
+        } else {
+            shoppingDao.deleteByfood(restaurant,cif,food);
+        }
+    }
+
+    public Map getMenu (Map<String,Object> map) {
+        Long restaurant = Long.valueOf(String.valueOf(map.get("restaurant")));
+        Object o = map.get("like");
+        List<Object[]> list;
+        Map result =new HashMap();
+        if (o != null) {
+            StringBuilder builder = new StringBuilder();
+            builder.append("%").append(String.valueOf(o)).append("%");
+            String like = builder.toString();
+            o = map.get("page");
+            if(o == null) {
+                int count = foodMenuDao.getFoosCou(restaurant,like);
+                result.put("count",count);
+                list = foodMenuDao.getFoosByC(restaurant,like,0);
+            } else {
+                int count = Integer.valueOf(String.valueOf(o));
+                list = foodMenuDao.getFoosByC(restaurant,like,count*10);
+            }
+        }else {
+            o = map.get("page");
+            if(o == null) {
+                int count = foodMenuDao.getFoosCou(restaurant);
+                result.put("count",count);
+                list = foodMenuDao.getFoosByC(restaurant,0);
+            } else {
+                int count = Integer.valueOf(String.valueOf(o));
+                list = foodMenuDao.getFoosByC(restaurant,count*10);
+            }
+        }
+        List<Map> foods = new LinkedList<>();
+        for(Object[] objects: list) {
+            Map arg = new HashMap();
+            arg.put("id",objects[0]);
+            arg.put("name",objects[1]);
+            arg.put("price",objects[2]);
+            arg.put("des",objects[3]);
+            arg.put("out",objects[4]);
+            foods.add(arg);
+        }
+        result.put("foods",foods);
+        return result;
+    }
+
+
+    public Map addCart (Map map) {
+        Long restaurant = Long.valueOf(String.valueOf(map.get("restaurant")));
+        Long food = Long.valueOf(String.valueOf(map.get("food")));
+        Long cif = Long.valueOf(String.valueOf(map.get("cif")));
+        int i = shoppingDao.grtFoodC(restaurant,cif,food);
+        if(i == 0) {
+            ShoppingCartPk pk = new ShoppingCartPk();
+            pk.setFood(food);
+            pk.setRestaurant(restaurant);
+            pk.setClient(cif);
+            ShoppingCart cart = new ShoppingCart();
+            cart.setShoppingCardPk(pk);
+            cart.setCount(1);
+            shoppingDao.save(cart);
+        } else {
+            shoppingDao.addCount(restaurant,cif,food);
+        }
+        Map result = new HashMap();
+        result.put("state",true);
+        return  result;
+    }
+
+    public Map getFoodInfo (Long restaurant,Long food) {
+        List need = this.getNeed(restaurant,food);
+        List image = this.getImage(restaurant,food);
+        Map result = new HashMap();
+        result.put("need",need);
+        result.put("image",image);
+        FoodMenu foodMenu = foodMenuDao.getByID(food,restaurant);
+        result.put("cost",foodMenu.getTimeCost());
+        result.put("sell",foodMenu.getSellNumber());
+        return result;
     }
  }

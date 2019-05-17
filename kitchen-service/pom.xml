@@ -93,6 +93,27 @@
 		</dependency>
 
 
+        <!--  sharding jdbc-->
+		<!--<dependency>-->
+		<!--<groupId>io.shardingsphere</groupId>-->
+		<!--<artifactId>sharding-jdbc-spring-boot-starter</artifactId>-->
+		<!--<version>3.0.0.M2</version>-->
+		<!--</dependency>-->
+
+		<!--<dependency>-->
+		<!--<groupId>com.alibaba</groupId>-->
+		<!--<artifactId>druid</artifactId>-->
+		<!--<version>1.1.9</version>-->
+		<!--</dependency>-->
+
+		<!--<dependency>-->
+		<!--<groupId>com.dangdang</groupId>-->
+		<!--<artifactId>sharding-jdbc-core</artifactId>-->
+		<!--<version>1.4.2</version>-->
+		<!--</dependency>-->
+
+
+
 	</dependencies>
 
 	<build>

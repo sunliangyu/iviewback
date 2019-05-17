@@ -11,12 +11,6 @@ public class FoodImage implements Serializable {
     @EmbeddedId
     private FoodImagePk id;
 
-    @Column
-    private String url;
-
-    @Column
-    private char flag;
-
     public FoodImagePk getId() {
         return id;
     }
@@ -25,20 +19,6 @@ public class FoodImage implements Serializable {
         this.id = id;
     }
 
-    public String getUrl() {
-        return url;
-    }
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public char getFlag() {
-        return flag;
-    }
-
-    public void setFlag(char flag) {
-        this.flag = flag;
-    }
 
 }

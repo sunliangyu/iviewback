@@ -13,6 +13,17 @@ public class FoodImagePk implements Serializable {
     @Column(name = "food")
     private Long food;
 
+    @Column(name = "url")
+    private String url;
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
     public Long getRestaurant() {
         return restaurant;
     }

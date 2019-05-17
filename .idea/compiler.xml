@@ -16,6 +16,7 @@
         <module name="gateway-service" />
         <module name="kitchen-service" />
         <module name="monitor-service" />
+        <module name="shardingtest" />
         <module name="system-service" />
         <module name="zipkin-service" />
       </profile>
@@ -36,6 +37,7 @@
       <module name="kitchen-service" target="1.8" />
       <module name="log-service" target="1.8" />
       <module name="monitor-service" target="1.8" />
+      <module name="shardingtest" target="1.8" />
       <module name="SpringCloudInAction" target="1.8" />
       <module name="system-service" target="1.8" />
       <module name="uaa-service" target="1.8" />

@@ -72,8 +72,8 @@ public class FoodController {
 
     @ApiOperation(value = "获取某个菜单的配料", notes = "获取某个菜单的配料")
     @GetMapping("/getNeed")
-    public List getNeed (@RequestParam Map<String,Object> map) {
-        return foodService.getNeed(map);
+    public List getNeed (Long restaurant , Long id) {
+        return foodService.getNeed(restaurant,id);
     }
 
     @ApiOperation(value = "更改订单状态", notes = "更改订单状态")
@@ -83,4 +83,40 @@ public class FoodController {
     }
 
 
+    @GetMapping("/getImage")
+    public List getImage (Long restaurant, Long id) {
+        return foodService.getImage(restaurant,id);
+    }
+
+    @PostMapping("/alertImage")
+    public void  alertImage (@RequestBody Map<String,Object> map)  {
+        foodService.alertImage(map);
+    }
+
+    @GetMapping("getProgress")
+    public List getProgress(@RequestParam Map<String,Object> map) {
+        return foodService.getProgress(map);
+    }
+
+    @GetMapping("/getCart")
+    public List<Map> getCart(@RequestParam Map<String,Object> map) {
+        return foodService.getCart(map);
+    }
+    @PostMapping("/alertCart")
+    public void alertCart(@RequestBody Map<String,Object> map) {
+         foodService.alertCart(map);
+    }
+
+    @GetMapping("/getMenu")
+    public Map getMenu (@RequestParam Map map) {
+        return foodService.getMenu(map);
+    }
+    @PostMapping("/addCart")
+    public Map addCart (@RequestBody Map map) {
+        return foodService.addCart(map);
+    }
+    @GetMapping("/getFoodInfo")
+    public Map getFoodInfo ( Long restaurant, Long food) {
+        return foodService.getFoodInfo(restaurant,food);
+    }
 }
